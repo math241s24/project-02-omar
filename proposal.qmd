@@ -1,30 +1,32 @@
 ---
 title: "Project 2"
 subtitle: "Proposal"
-authors: ""
+authors: "Omar Youssif"
 format: html
 editor: visual
 ---
 
-```{r load-packages}
-#| label: load-pkgs
-#| message: false
-#| warning: false
-
+```{r load-packages, echo = FALSE, message = FALSE, warning = FALSE, comment = FALSE, results = FALSE}
+library(readr)
+library(dplyr)
 library(tidyverse)
 ```
 
+# Proposal
+
+In this project, the goal is to create some interesting and interactive visualizations for analysis of international air travel in the United States. 
+
 ## Dataset
 
-```{r load-data}
-#| label: load-data
-#| message: false
+```{r data loading, echo = FALSE, message = FALSE, warning = FALSE, comment = FALSE, results = FALSE}
 
-## read data 
+dotair2023 <- read_csv("data/us-dot-air-intl-2023.csv")
 ```
 
+Below is monthly data about international air travel in all of the United States from 1990 to 2023:
 
-## Reason for Choosing this Dataset
+```{r, echo = FALSE}
+glimpse(dotair2023)
+```
 
-
-## Questions and Analysis Plan
+The data used for this project will have 766,693 rows and 16 columns and is sourced from the Department of Transportation.

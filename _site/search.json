@@ -4,14 +4,14 @@
     "href": "proposal.html",
     "title": "Project 2",
     "section": "",
-    "text": "library(tidyverse)"
+    "text": "In this project, the goal is to create some interesting and interactive visualizations for analysis of international air travel in the United States.\n\n\nMonthly data about international air travel in all of the United States from 1990 to 2023:\n\n\nRows: 766,693\nColumns: 16\n$ data_dte     &lt;chr&gt; \"07/01/2004\", \"11/01/2008\", \"10/01/2002\", \"03/01/2007\", \"…\n$ Year         &lt;dbl&gt; 2004, 2008, 2002, 2007, 2009, 2005, 2009, 2010, 2007, 200…\n$ Month        &lt;dbl&gt; 7, 11, 10, 3, 3, 5, 4, 4, 2, 8, 11, 9, 7, 9, 9, 6, 10, 7,…\n$ usg_apt_id   &lt;dbl&gt; 14747, 11697, 10257, 12889, 12892, 11298, 13303, 14843, 1…\n$ usg_apt      &lt;chr&gt; \"SEA\", \"FLL\", \"ALB\", \"LAS\", \"LAX\", \"DFW\", \"MIA\", \"SJU\", \"…\n$ usg_wac      &lt;dbl&gt; 93, 33, 22, 85, 91, 74, 33, 3, 33, 21, 38, 33, 11, 22, 23…\n$ fg_apt_id    &lt;dbl&gt; 16229, 12010, 16271, 13165, 13252, 10920, 14838, 13068, 1…\n$ fg_apt       &lt;chr&gt; \"YVR\", \"GUA\", \"YYZ\", \"MAN\", \"MEX\", \"CDG\", \"SJO\", \"LRM\", \"…\n$ fg_wac       &lt;dbl&gt; 906, 127, 936, 493, 148, 427, 110, 224, 324, 493, 204, 11…\n$ airlineid    &lt;dbl&gt; 19687, 20416, 20206, 19541, 19534, 19805, 19805, 20414, 1…\n$ carrier      &lt;chr&gt; \"QX\", \"NK\", \"QK\", \"BD\", \"AM\", \"AA\", \"AA\", \"OW\", \"AA\", \"CO…\n$ carriergroup &lt;dbl&gt; 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, …\n$ type         &lt;chr&gt; \"Passengers\", \"Passengers\", \"Passengers\", \"Passengers\", \"…\n$ Scheduled    &lt;dbl&gt; 19265, 3099, 33, 3815, 17993, 11530, 33400, 1383, 14056, …\n$ Charter      &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 683, 0, 0, 0…\n$ Total        &lt;dbl&gt; 19265, 3099, 33, 3815, 17993, 11530, 33400, 1383, 14056, …\n\n\nThe data used for this project will have 766,693 rows and 16 columns."
   },
   {
     "objectID": "proposal.html#dataset",
     "href": "proposal.html#dataset",
     "title": "Project 2",
-    "section": "Dataset",
-    "text": "Dataset\n\n## read data"
+    "section": "",
+    "text": "Monthly data about international air travel in all of the United States from 1990 to 2023:\n\n\nRows: 766,693\nColumns: 16\n$ data_dte     &lt;chr&gt; \"07/01/2004\", \"11/01/2008\", \"10/01/2002\", \"03/01/2007\", \"…\n$ Year         &lt;dbl&gt; 2004, 2008, 2002, 2007, 2009, 2005, 2009, 2010, 2007, 200…\n$ Month        &lt;dbl&gt; 7, 11, 10, 3, 3, 5, 4, 4, 2, 8, 11, 9, 7, 9, 9, 6, 10, 7,…\n$ usg_apt_id   &lt;dbl&gt; 14747, 11697, 10257, 12889, 12892, 11298, 13303, 14843, 1…\n$ usg_apt      &lt;chr&gt; \"SEA\", \"FLL\", \"ALB\", \"LAS\", \"LAX\", \"DFW\", \"MIA\", \"SJU\", \"…\n$ usg_wac      &lt;dbl&gt; 93, 33, 22, 85, 91, 74, 33, 3, 33, 21, 38, 33, 11, 22, 23…\n$ fg_apt_id    &lt;dbl&gt; 16229, 12010, 16271, 13165, 13252, 10920, 14838, 13068, 1…\n$ fg_apt       &lt;chr&gt; \"YVR\", \"GUA\", \"YYZ\", \"MAN\", \"MEX\", \"CDG\", \"SJO\", \"LRM\", \"…\n$ fg_wac       &lt;dbl&gt; 906, 127, 936, 493, 148, 427, 110, 224, 324, 493, 204, 11…\n$ airlineid    &lt;dbl&gt; 19687, 20416, 20206, 19541, 19534, 19805, 19805, 20414, 1…\n$ carrier      &lt;chr&gt; \"QX\", \"NK\", \"QK\", \"BD\", \"AM\", \"AA\", \"AA\", \"OW\", \"AA\", \"CO…\n$ carriergroup &lt;dbl&gt; 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, …\n$ type         &lt;chr&gt; \"Passengers\", \"Passengers\", \"Passengers\", \"Passengers\", \"…\n$ Scheduled    &lt;dbl&gt; 19265, 3099, 33, 3815, 17993, 11530, 33400, 1383, 14056, …\n$ Charter      &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 683, 0, 0, 0…\n$ Total        &lt;dbl&gt; 19265, 3099, 33, 3815, 17993, 11530, 33400, 1383, 14056, …\n\n\nThe data used for this project will have 766,693 rows and 16 columns."
   },
   {
     "objectID": "proposal.html#reason-for-choosing-this-dataset",
@@ -30,9 +30,9 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "Your project title",
+    "title": "Examining International Air Travel Within the United States",
     "section": "",
-    "text": "This project was developed by XX. For MATH/STAT241 at Reed College. The team is comprised of the following team members."
+    "text": "This project was developed by Omar Youssif. For MATH/STAT241 at Reed College. The data is sourced from the U.S. Department of Transportation (data owner: Randall Keizer at randall.keizer@dot.gov) and is accessible through this link."
   },
   {
     "objectID": "index.html",
