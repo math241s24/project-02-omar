@@ -4,7 +4,7 @@
 
 In the repo, there are these following files.
 
--   proejct-02.Rproj: This is the project environment for this project. **Please open R Studio through this file in order to not have data directory issues.**
+-   project-02.Rproj: This is the project environment for this project. **Please open R Studio through this file in order to not have data directory issues.**
 
 -   proposal.qmd: This is the file with a project proposal explaining the idea and plan of attack.
 
