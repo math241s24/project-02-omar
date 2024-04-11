@@ -33,7 +33,6 @@ glimpse(dotair2023)
 
 The data used for this project will have 766,693 rows and 16 columns and is sourced from the Department of Transportation. The dataset is incredibly useful and trustworthy as it comes straight from the governmnet. It also has two-directional flights where a flight from abroad to the US is also included, not just US to abroad.
 
-
 ## Plan of Attack
 
 Week 11: Incorporate feedback from proposal. Start data anlaysis to find interesting things/trends to explore
