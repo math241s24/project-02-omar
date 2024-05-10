@@ -50,6 +50,9 @@ ul.task-list li input[type="checkbox"] {
 <section id="reed-college-math-241-with-adrien-allorant---data-science" class="level3">
 <h3 class="anchored" data-anchor-id="reed-college-math-241-with-adrien-allorant---data-science">Reed College: Math 241 with Adrien Allorant - Data Science</h3>
 <p>In this <strong><em>data</em></strong> folder, there is a csv file named “us-dot-air-intl-2023.csv” that contains all of the data for this project. It has 766,693 rows and 16 columns.</p>
+</section>
+<section id="codebook-for-airports.dat-sourced-from-openflights.org" class="level3">
+<h3 class="anchored" data-anchor-id="codebook-for-airports.dat-sourced-from-openflights.org">Codebook for <strong>airports.dat</strong> (sourced from <a href="https://openflights.org/data.php">OpenFlights.org</a>)</h3>
 <table class="table">
 <thead>
 <tr class="header">
@@ -80,8 +83,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td><strong>ICAO</strong></td>
-<td>4-letter ICAO code.<br>
-Null if not assigned.</td>
+<td>4-letter ICAO code. Null if not assigned.</td>
 </tr>
 <tr class="odd">
 <td><strong>Latitude</strong></td>
@@ -109,17 +111,22 @@ Null if not assigned.</td>
 </tr>
 <tr class="odd">
 <td><strong>Type</strong></td>
-<td>Type of the airport. Value “airport” for air terminals, “station” for train stations, “port” for ferry terminals and “unknown” if not known.&nbsp;<em>In airports.csv, only type=airport is included.</em></td>
+<td>Type of the airport. Value “airport” for air terminals, “station” for train stations, “port” for ferry terminals and “unknown” if not known. In airports.csv, only type=airport is included.</td>
 </tr>
 <tr class="even">
 <td><strong>Source</strong></td>
-<td>Source of this data. “OurAirports” for data sourced from&nbsp;<a href="https://ourairports.com/data/">OurAirports</a>, “Legacy” for old data not matched to OurAirports (mostly DAFIF), “User” for unverified user contributions.&nbsp;<em>In airports.csv, only source=OurAirports is included.</em></td>
+<td>Source of this data. “OurAirports” for data sourced from&nbsp;<a href="https://ourairports.com/data/">OurAirports</a>, “Legacy” for old data not matched to OurAirports (mostly DAFIF), “User” for unverified user contributions. In airports.csv, only source=OurAirports is included.</td>
 </tr>
 </tbody>
 </table>
-<p>Codebook for <strong>airports.dat</strong> (sourced from <a href="https://openflights.org/data.php">OpenFlights.org</a>)</p>
+</section>
+<section id="codebook-for-countries.dat-sourced-from-openflights.org" class="level3">
+<h3 class="anchored" data-anchor-id="codebook-for-countries.dat-sourced-from-openflights.org">Codebook for <strong>countries.dat</strong> (sourced from <a href="https://openflights.org/data.php">OpenFlights.org</a>)</h3>
 <table class="table">
-<caption>Codebook for <strong>countries.dat</strong> (sourced from <a href="https://openflights.org/data.php">OpenFlights.org</a>)</caption>
+<colgroup>
+<col style="width: 13%">
+<col style="width: 86%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Variable Name</th>
@@ -141,8 +148,14 @@ Null if not assigned.</td>
 </tr>
 </tbody>
 </table>
+</section>
+<section id="codebook-for-airlines.dat-sourced-from-openflights.org" class="level3">
+<h3 class="anchored" data-anchor-id="codebook-for-airlines.dat-sourced-from-openflights.org">Codebook for <strong>airlines.dat</strong> (sourced from <a href="https://openflights.org/data.php">OpenFlights.org</a>)</h3>
 <table class="table">
-<caption>Codebook for <strong>airlines.dat</strong> (sourced from <a href="https://openflights.org/data.php">OpenFlights.org</a>)</caption>
+<colgroup>
+<col style="width: 14%">
+<col style="width: 85%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Variable Name</th>
@@ -180,12 +193,18 @@ Null if not assigned.</td>
 </tr>
 <tr class="even">
 <td><strong>Active</strong></td>
-<td>“Y” if the airline is or has until recently been operational, “N” if it is defunct. This field is&nbsp;<em>not</em>&nbsp;reliable: in particular, major airlines that stopped flying long ago, but have not had their IATA code reassigned (eg. Ansett/AN), will incorrectly show as “Y”.</td>
+<td>“Y” if the airline is or has until recently been operational, “N” if it is defunct.</td>
 </tr>
 </tbody>
 </table>
+</section>
+<section id="codebook-for-us-dot-air-intl-2023.csv-sourced-from-u.s.-department-of-transportation" class="level3">
+<h3 class="anchored" data-anchor-id="codebook-for-us-dot-air-intl-2023.csv-sourced-from-u.s.-department-of-transportation">Codebook for <strong>us-dot-air-intl-2023.csv</strong> (sourced from U.S. Department of Transportation)</h3>
 <table class="table">
-<caption>Codebook for <strong>us-dot-air-intl-2023.csv</strong> (sourced from U.S. Department of Transportation). Data tables relating to Airline ID, Carrier, World Area Code may be found at <a href="http://www.transtats.bts.gov/TableInfo.asp?Table_ID=304&amp;DB_Short_Name=Aviation%20Support%20Tables&amp;Info_Only=1">this link</a>.</caption>
+<colgroup>
+<col style="width: 13%">
+<col style="width: 86%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Variable Name</th>
@@ -207,7 +226,7 @@ Null if not assigned.</td>
 </tr>
 <tr class="even">
 <td><strong>usg_apt</strong></td>
-<td>US Gateway Airport Code - usually assigned by IATA, but in absense of IATA designation, may show FAA-assigned code</td>
+<td>US Gateway Airport Code - usually assigned by IATA, but in absense of IATA designation</td>
 </tr>
 <tr class="odd">
 <td><strong>usg_wac</strong></td>
@@ -219,7 +238,7 @@ Null if not assigned.</td>
 </tr>
 <tr class="odd">
 <td><strong>fg_apt</strong></td>
-<td>Foreign Gateway Airport Code - usually assigned by IATA, but in absense of IATA designation, may show FAA-assigned code</td>
+<td>Foreign Gateway Airport Code - usually assigned by IATA, but in absense of IATA designation</td>
 </tr>
 <tr class="even">
 <td><strong>airlineid</strong></td>
