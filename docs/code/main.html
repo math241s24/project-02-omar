@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.433">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Project 2: International U.S. Air Travel – main</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Project 2: International U.S. Air Travel</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html" rel="" target="">
+ <span class="menu-text">Project</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../proposal.html" rel="" target="">
+ <span class="menu-text">Proposal</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../presentation.html" rel="" target="">
+ <span class="menu-text">Presentation</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/math241s24/project-02-omar/tree/main" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Formatting for chord/circular graph</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>new <span class="ot">&lt;-</span> <span class="fu">merge</span>(intlTravel_2022, airports[, <span class="fu">c</span>(<span class="st">"IATA"</span>, <span class="st">"Country"</span>, <span class="st">"region"</span>)], </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>                     <span class="at">by.x =</span> <span class="st">"fg_apt"</span>, <span class="at">by.y =</span> <span class="st">"IATA"</span>, <span class="at">all.x =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>new <span class="ot">&lt;-</span> new <span class="sc">%&gt;%</span> <span class="fu">na.omit</span>()</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>new<span class="sc">$</span>region <span class="ot">&lt;-</span> <span class="fu">factor</span>(</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  new<span class="sc">$</span>region,</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">levels =</span>  <span class="fu">c</span>(</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="st">"North America"</span>, </span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Latin America &amp; Caribbean"</span>, </span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Europe &amp; Central Asia"</span>, </span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Sub-Saharan Africa"</span>, </span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Middle East &amp; North Africa"</span>,</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="st">"South Asia"</span>,</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="st">"East Asia &amp; Pacific"</span>),</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">ordered =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>new <span class="ot">&lt;-</span> new[<span class="fu">order</span>(new<span class="sc">$</span>region), ]</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>orig <span class="ot">&lt;-</span> new<span class="sc">$</span>Country</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>dest <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="st">"United States"</span>, <span class="fu">nrow</span>(new))</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>direc <span class="ot">&lt;-</span> new<span class="sc">$</span>region</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>df <span class="ot">=</span> <span class="fu">data.frame</span>(orig, dest, direc, <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>col <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"North America"</span> <span class="ot">=</span> <span class="st">"red"</span>,</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Latin America &amp; Caribbean"</span> <span class="ot">=</span> <span class="st">"blue"</span>,</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Europe &amp; Central Asia"</span> <span class="ot">=</span> <span class="st">"green"</span>,</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Sub-Saharan Africa"</span> <span class="ot">=</span> <span class="st">"orange"</span>,</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Middle East &amp; North Africa"</span> <span class="ot">=</span> <span class="st">"pink"</span>,</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>        <span class="st">"South Asia"</span> <span class="ot">=</span> <span class="st">"gold"</span>,</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>        <span class="st">"East Asia &amp; Pacific"</span> <span class="ot">=</span> <span class="st">"purple"</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>tempcolor <span class="ot">&lt;-</span> <span class="fu">setNames</span>(col, <span class="fu">c</span>(<span class="st">"North America"</span>, <span class="st">"Latin America &amp; Caribbean"</span>, <span class="st">"Europe &amp; Central Asia"</span>, <span class="st">"Sub-Saharan Africa"</span>, <span class="st">"Middle East &amp; North Africa"</span>, <span class="st">"South Asia"</span>, <span class="st">"Enameast Asia &amp; Pacific"</span>))[direc]</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>color <span class="ot">&lt;-</span> <span class="fu">setNames</span>(tempcolor, orig)[direc]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate the chord diagram</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Warning: This takes an extreme amount of computational resources and often takes ~5 minutes to run, so I have eval as false, and an SVG file with the output saved (to preserve resources &amp; time for checking the graph)</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">chordDiagram</span>(df[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>], </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>             <span class="at">col =</span> col[df[[<span class="dv">3</span>]]],</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>             <span class="at">grid.col =</span> color,</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">annotationTrack =</span> <span class="st">"grid"</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="fu">circos.text</span>(</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> <span class="dv">17</span>, <span class="at">y =</span> <span class="dv">2</span>, <span class="at">labels =</span> <span class="st">"United States"</span>, </span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">facing =</span> <span class="st">"bending"</span>, <span class="at">niceFacing =</span> <span class="cn">TRUE</span>, <span class="at">adj =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>), <span class="at">cex =</span> <span class="fl">0.8</span>, <span class="at">col =</span> <span class="st">"black"</span>)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"bottomleft"</span>, <span class="at">pch =</span> <span class="dv">15</span>, <span class="at">legend =</span> <span class="fu">names</span>(col), <span class="at">col =</span> col, <span class="at">cex =</span> <span class="fl">0.7</span>, <span class="at">pt.cex =</span> <span class="fl">0.7</span>)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="fu">circos.clear</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Animated Flight Map</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>plot2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>() <span class="sc">+</span>  <span class="fu">borders</span>(<span class="st">"world"</span>, <span class="at">colour =</span> <span class="st">"gray85"</span>, <span class="at">fill =</span> <span class="st">"gray80"</span>) <span class="sc">+</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_map</span>() <span class="sc">+</span> </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_curve</span>(<span class="at">data =</span> poproutes, <span class="fu">aes</span>(<span class="at">x =</span> us_long, <span class="at">y =</span> us_lat, <span class="at">xend =</span> fg_long, <span class="at">yend =</span> fg_lat, <span class="at">size =</span> count), <span class="at">color =</span> <span class="st">"green"</span>, <span class="at">alpha =</span> <span class="fl">0.02</span>) <span class="sc">+</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> poproutes, <span class="fu">aes</span>(<span class="at">x =</span> us_long, <span class="at">y =</span> us_lat), <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">size =</span> <span class="fl">0.1</span>) <span class="sc">+</span> </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> poproutes, <span class="fu">aes</span>(<span class="at">x =</span> fg_long, <span class="at">y =</span> fg_lat), <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">size =</span> <span class="fl">0.1</span>) <span class="sc">+</span> </span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_size_continuous</span>(<span class="at">range =</span> <span class="fu">c</span>(<span class="fl">0.1</span>, <span class="dv">2</span>)) <span class="sc">+</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Longitude"</span>, <span class="at">y =</span> <span class="st">"Latitude"</span>, <span class="at">title =</span> <span class="st">"Number of Passengers Flying With U.S. Airports"</span>, <span class="at">subtitle =</span> <span class="st">"Year: {closest_state}"</span>) <span class="sc">+</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>plot2_animate <span class="ot">&lt;-</span> plot2 <span class="sc">+</span> <span class="fu">transition_states</span>(Year, <span class="at">transition_length =</span> <span class="dv">0</span>, <span class="at">state_length =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_fixed</span>()</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">animate</span>(plot2_animate,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">fps =</span> <span class="fl">1.5</span>,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">duration =</span> <span class="dv">25</span>   <span class="co"># Duration of animation (in seconds)</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`nframes` and `fps` adjusted to match transition</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="main_files/figure-html/unnamed-chunk-4-1.gif" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Shiny App</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>ui <span class="ot">&lt;-</span> <span class="fu">fluidPage</span>(</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">titlePanel</span>(<span class="st">"U.S. International Travel Volume By Passenger Counts"</span>),</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sidebarLayout</span>(</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sidebarPanel</span>(</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>     <span class="fu">selectizeInput</span>(<span class="at">inputId =</span> <span class="st">"selectedIATA"</span>,</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>                     <span class="at">label =</span> <span class="st">"Choose the IATA (3 letter) codes for airports you'd like to filter by!"</span>,</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>                     <span class="at">choices =</span> airports<span class="sc">$</span>IATA,</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>                     <span class="at">multiple =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>                     <span class="at">selected =</span> <span class="cn">NULL</span>),</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>      <span class="fu">radioButtons</span>(<span class="at">inputId =</span> <span class="st">"filterType"</span>,</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>                   <span class="at">label =</span> <span class="st">"Choose how you'd like to filter!"</span>,</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>                   <span class="at">choices =</span> <span class="fu">c</span>(<span class="st">"Include"</span>, <span class="st">"Exclude"</span>),</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>                   <span class="at">selected =</span> <span class="st">"Include"</span>),</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>      <span class="fu">selectInput</span>(<span class="st">"year"</span>, <span class="st">"Select Year:"</span>, <span class="at">choices =</span> <span class="dv">1990</span><span class="sc">:</span><span class="dv">2022</span>),</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>      <span class="fu">selectInput</span>(<span class="st">"month"</span>, <span class="st">"Select Month:"</span>, <span class="at">choices =</span> month.name, <span class="at">selected =</span> <span class="cn">NULL</span>),</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>      <span class="fu">submitButton</span>(<span class="st">"Update Results!"</span>)</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>        <span class="fu">mainPanel</span>(</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>      <span class="fu">plotOutput</span>(<span class="at">outputId =</span> <span class="st">"graph"</span>),</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>      <span class="fu">dataTableOutput</span>(<span class="at">outputId =</span> <span class="st">"table"</span>)</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: The select input "selectedIATA" contains a large number of options;
+consider using server-side selectize for massively improved performance. See
+the Details section of the ?selectizeInput help topic.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output, session) {</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">updateSelectizeInput</span>(session, <span class="st">'selectedIATA'</span>, </span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>                       <span class="at">choices =</span> <span class="fu">unique</span>(airports<span class="sc">$</span>IATA), </span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>                       <span class="at">server =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  poproutes2 <span class="ot">&lt;-</span> <span class="fu">reactive</span>({</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    filtered_routes <span class="ot">&lt;-</span> poproutes <span class="sc">%&gt;%</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>      <span class="fu">filter</span>(Year <span class="sc">==</span> input<span class="sc">$</span>year)</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(input<span class="sc">$</span>selectedIATA) <span class="sc">&amp;&amp;</span> <span class="fu">length</span>(input<span class="sc">$</span>selectedIATA) <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (input<span class="sc">$</span>filterType <span class="sc">==</span> <span class="st">"Include"</span>) {</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>        filtered_routes <span class="ot">&lt;-</span> filtered_routes <span class="sc">%&gt;%</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>          <span class="fu">filter</span>(usg_apt <span class="sc">%in%</span> input<span class="sc">$</span>selectedIATA <span class="sc">|</span> fg_apt <span class="sc">%in%</span> input<span class="sc">$</span>selectedIATA)</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>      } <span class="cf">else</span> {</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>        filtered_routes <span class="ot">&lt;-</span> filtered_routes <span class="sc">%&gt;%</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>          <span class="fu">filter</span>(<span class="sc">!</span>(usg_apt <span class="sc">%in%</span> input<span class="sc">$</span>selectedIATA <span class="sc">|</span> fg_apt <span class="sc">%in%</span> input<span class="sc">$</span>selectedIATA))</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>    filtered_routes</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>  }) </span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>  output<span class="sc">$</span>graph <span class="ot">&lt;-</span> <span class="fu">renderPlot</span>({</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>    routes_data <span class="ot">&lt;-</span> <span class="fu">poproutes2</span>()</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>() <span class="sc">+</span>  </span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>      <span class="fu">borders</span>(<span class="st">"world"</span>, <span class="at">colour =</span> <span class="st">"gray85"</span>, <span class="at">fill =</span> <span class="st">"gray80"</span>) <span class="sc">+</span></span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>      <span class="fu">theme_map</span>() <span class="sc">+</span> </span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_curve</span>(<span class="at">data =</span> routes_data, <span class="fu">aes</span>(<span class="at">x =</span> us_long, <span class="at">y =</span> us_lat, <span class="at">xend =</span> fg_long, <span class="at">yend =</span> fg_lat, <span class="at">size =</span> count), <span class="at">color =</span> <span class="st">"green"</span>, <span class="at">alpha =</span> <span class="fl">0.02</span>) <span class="sc">+</span></span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_point</span>(<span class="at">data =</span> routes_data, <span class="fu">aes</span>(<span class="at">x =</span> us_long, <span class="at">y =</span> us_lat), <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span> </span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_point</span>(<span class="at">data =</span> routes_data, <span class="fu">aes</span>(<span class="at">x =</span> fg_long, <span class="at">y =</span> fg_lat), <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span> </span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>      <span class="fu">scale_size_continuous</span>(<span class="at">name =</span> <span class="st">"Number of Passengers"</span>, <span class="at">range =</span> <span class="fu">c</span>(<span class="fl">0.5</span>, <span class="dv">5</span>)) <span class="sc">+</span> <span class="fu">guides</span>(<span class="at">size =</span> <span class="fu">guide_legend</span>(<span class="at">override.aes =</span> <span class="fu">list</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">1</span>))) <span class="sc">+</span></span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>      <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Longitude"</span>, <span class="at">y =</span> <span class="st">"Latitude"</span>, <span class="at">title =</span> <span class="st">"Number of Passengers Flying With U.S. Airports"</span>, <span class="at">subtitle =</span> <span class="fu">paste</span>(<span class="st">"Year:"</span>, input<span class="sc">$</span>year))</span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a><span class="fu">shinyApp</span>(<span class="at">ui =</span> ui, <span class="at">server =</span> server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>PhantomJS not found. You can install it with webshot::install_phantomjs(). If it is installed, please make sure the phantomjs executable can be found via the PATH variable.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Listening on http://127.0.0.1:7267</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="main_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># U.S. Foreign Airline Graph</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>highlight_events <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">event =</span> <span class="fu">c</span>(<span class="st">"9/11"</span>, <span class="st">"2008 Recession"</span>, <span class="st">"COVID-19"</span>),</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">start_year =</span> <span class="fu">c</span>(<span class="dv">2001</span>, <span class="dv">2008</span>, <span class="dv">2020</span>),</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">end_year =</span> <span class="fu">c</span>(<span class="dv">2002</span>, <span class="dv">2009</span>, <span class="dv">2022</span>),</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">Year =</span> <span class="fu">c</span>(<span class="dv">2001</span>, <span class="dv">2008</span>, <span class="dv">2020</span>)</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>airlineOrigin <span class="ot">&lt;-</span> us_dot_air_intl_2023 <span class="sc">%&gt;%</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Year) <span class="sc">%&gt;%</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">percentage =</span> <span class="fu">mean</span>(<span class="sc">!</span>carriergroup) <span class="sc">*</span> <span class="dv">100</span>,</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>            <span class="at">total =</span> <span class="fu">sum</span>(Total))</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> airlineOrigin, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> percentage, <span class="at">color =</span> total)) <span class="sc">+</span></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> airlineOrigin, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> percentage, <span class="at">color =</span> total)) <span class="sc">+</span></span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Year"</span>,</span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Percentage of Flights"</span>,</span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Passenger Counts"</span>,</span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Percentage of Non-U.S. Airline Flights Over Time"</span>,</span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Data sourced from U.S. Dept. Of Transportation from 1990-2023"</span>) <span class="sc">+</span></span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_rect</span>(<span class="at">data =</span> highlight_events, <span class="fu">aes</span>(<span class="at">xmin =</span> start_year, <span class="at">xmax=</span>end_year, <span class="at">ymin=</span><span class="sc">-</span><span class="cn">Inf</span>, <span class="at">ymax =</span> <span class="cn">Inf</span>, <span class="at">fill =</span> <span class="st">"gray"</span>, <span class="at">alpha =</span> <span class="fl">0.2</span>)) <span class="sc">+</span> </span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(</span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> highlight_events,</span>
+<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x =</span> start_year <span class="sc">+</span> (end_year <span class="sc">-</span> start_year) <span class="sc">/</span> <span class="dv">2</span>, <span class="at">y =</span> <span class="dv">50</span>, <span class="at">label =</span> event),</span>
+<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">segment.size =</span> <span class="fl">0.5</span>,</span>
+<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">nudge_x =</span> <span class="dv">3</span>,</span>
+<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">nudge_y =</span> <span class="fl">1.5</span>,</span>
+<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span>comma) <span class="sc">+</span></span>
+<span id="cb12-32"><a href="#cb12-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span><span class="fu">percent_format</span>(<span class="at">scale =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb12-33"><a href="#cb12-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">fill =</span> <span class="st">"none"</span>, <span class="at">alpha =</span> <span class="st">"none"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="main_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Airline Table</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>popair <span class="sc">%&gt;%</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(Name) <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(region)) <span class="sc">%&gt;%</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(region, Name, Country) <span class="sc">%&gt;%</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">passenger_count =</span> <span class="fu">sum</span>(count, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(region) <span class="sc">%&gt;%</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(passenger_count)) <span class="sc">%&gt;%</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">15</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">code2 =</span> <span class="fu">countrycode</span>(<span class="at">sourcevar =</span> Country, <span class="at">origin =</span> <span class="st">"country.name"</span>, <span class="at">destination =</span> <span class="st">"iso2c"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_move_to_start</span>(<span class="at">columns =</span> code2) <span class="sc">%&gt;%</span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_integer</span>(<span class="at">columns =</span> passenger_count) <span class="sc">%&gt;%</span></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_flag</span>(<span class="at">columns =</span> code2) <span class="sc">%&gt;%</span></span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_options</span>(<span class="at">data_row.padding =</span> <span class="fu">px</span>(<span class="dv">5</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_label</span>(</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">code2 =</span> <span class="st">""</span>,</span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">region =</span> <span class="st">"Region"</span>,</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">Name =</span> <span class="st">"Airline"</span>,</span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">passenger_count =</span> <span class="st">"Passenger Count"</span></span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`summarise()` has grouped output by 'region', 'Name'. You can override using
+the `.groups` argument.</code></pre>
+</div>
+<div class="cell-output-display">
+
+<div id="gdohbqzael" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#gdohbqzael table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#gdohbqzael thead, #gdohbqzael tbody, #gdohbqzael tfoot, #gdohbqzael tr, #gdohbqzael td, #gdohbqzael th {
+  border-style: none;
+}
+
+#gdohbqzael p {
+  margin: 0;
+  padding: 0;
+}
+
+#gdohbqzael .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#gdohbqzael .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#gdohbqzael .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#gdohbqzael .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#gdohbqzael .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#gdohbqzael .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gdohbqzael .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#gdohbqzael .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#gdohbqzael .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#gdohbqzael .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#gdohbqzael .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#gdohbqzael .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#gdohbqzael .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#gdohbqzael .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#gdohbqzael .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#gdohbqzael .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#gdohbqzael .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#gdohbqzael .gt_row {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#gdohbqzael .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gdohbqzael .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#gdohbqzael .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#gdohbqzael .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#gdohbqzael .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gdohbqzael .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#gdohbqzael .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#gdohbqzael .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gdohbqzael .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gdohbqzael .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#gdohbqzael .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gdohbqzael .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#gdohbqzael .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gdohbqzael .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#gdohbqzael .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gdohbqzael .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#gdohbqzael .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gdohbqzael .gt_left {
+  text-align: left;
+}
+
+#gdohbqzael .gt_center {
+  text-align: center;
+}
+
+#gdohbqzael .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#gdohbqzael .gt_font_normal {
+  font-weight: normal;
+}
+
+#gdohbqzael .gt_font_bold {
+  font-weight: bold;
+}
+
+#gdohbqzael .gt_font_italic {
+  font-style: italic;
+}
+
+#gdohbqzael .gt_super {
+  font-size: 65%;
+}
+
+#gdohbqzael .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#gdohbqzael .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#gdohbqzael .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#gdohbqzael .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#gdohbqzael .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#gdohbqzael .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#gdohbqzael .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id=""></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="Airline">Airline</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="Country">Country</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Passenger Count">Passenger Count</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr class="gt_group_heading_row">
+      <th colspan="4" class="gt_group_heading" scope="colgroup" id="East Asia &amp;amp; Pacific">East Asia &amp; Pacific</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="East Asia &amp; Pacific  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Japan</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M0 0h512v512H0z"></path><circle cx="256" cy="256" r="111.3" fill="#d80027"></circle></g></svg></span></td>
+<td headers="East Asia &amp; Pacific  Name" class="gt_row gt_left">Japan Airlines</td>
+<td headers="East Asia &amp; Pacific  Country" class="gt_row gt_left">Japan</td>
+<td headers="East Asia &amp; Pacific  passenger_count" class="gt_row gt_right">78,015,687</td></tr>
+    <tr><td headers="East Asia &amp; Pacific  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Japan</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M0 0h512v512H0z"></path><circle cx="256" cy="256" r="111.3" fill="#d80027"></circle></g></svg></span></td>
+<td headers="East Asia &amp; Pacific  Name" class="gt_row gt_left">Japan Airlines Domestic</td>
+<td headers="East Asia &amp; Pacific  Country" class="gt_row gt_left">Japan</td>
+<td headers="East Asia &amp; Pacific  passenger_count" class="gt_row gt_right">78,015,687</td></tr>
+    <tr><td headers="East Asia &amp; Pacific  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Korea, Rep.</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M0 0h512v512H0Z"></path><path fill="#333" d="m350 335 24-24 16 16-24 23zm-39 39 24-24 15 16-23 24zm87 8 23-24 16 16-24 24zm-40 39 24-23 16 15-24 24Zm16-63 24-23 15 15-23 24zm-39 40 23-24 16 16-24 23zm63-221-63-63 15-15 64 63zm-63-15-24-24 16-16 23 24zm39 39-24-24 16-15 24 23zm8-87-24-23 16-16 24 24Zm39 40-23-24 15-16 24 24ZM91 358l63 63-16 16-63-63zm63 16 23 24-15 15-24-23zm-40-39 24 23-16 16-23-24zm24-24 63 63-16 16-63-63zm16-220-63 63-16-16 63-63zm23 23-63 63-15-16 63-63zm24 24-63 63-16-16 63-63z"></path><path fill="#d80027" d="M319 319 193 193a89 89 0 1 1 126 126z"></path><path fill="#0052b4" d="M319 319a89 89 0 1 1-126-126z"></path><circle cx="224.5" cy="224.5" r="44.5" fill="#d80027"></circle><circle cx="287.5" cy="287.5" r="44.5" fill="#0052b4"></circle></g></svg></span></td>
+<td headers="East Asia &amp; Pacific  Name" class="gt_row gt_left">Korean Air</td>
+<td headers="East Asia &amp; Pacific  Country" class="gt_row gt_left">Republic of Korea</td>
+<td headers="East Asia &amp; Pacific  passenger_count" class="gt_row gt_right">53,000,866</td></tr>
+    <tr><td headers="East Asia &amp; Pacific  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Hong Kong</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#d80027" d="M0 0h512v512H0z"></path><path fill="#eee" d="M282.4 193.7c-5.8 24.2-16.1 19.6-21.2 40.7a55.7 55.7 0 0 1 26-108.3c-10.1 42.2.4 46-4.8 67.6zM205 211.6c21.2 13 13.6 21.4 32.1 32.8a55.7 55.7 0 0 1-94.9-58.2c37 22.7 43.8 13.8 62.8 25.4zm-7 79.3c19-16.2 24.7-6.4 41.2-20.4a55.7 55.7 0 0 1-84.7 72.2c33-28.2 26.6-37.4 43.6-51.8zm73.4 31c-9.6-23 1.5-25.3-6.8-45.3a55.7 55.7 0 0 1 42.6 102.8c-16.6-40-27.3-36.9-35.8-57.4zm52.2-60c-24.9 2-23.7-9.3-45.3-7.6a55.7 55.7 0 0 1 111-8.7c-43.3 3.4-43.6 14.5-65.7 16.3z"></path></g></svg></span></td>
+<td headers="East Asia &amp; Pacific  Name" class="gt_row gt_left">Cathay Pacific</td>
+<td headers="East Asia &amp; Pacific  Country" class="gt_row gt_left">Hong Kong SAR of China</td>
+<td headers="East Asia &amp; Pacific  passenger_count" class="gt_row gt_right">36,280,815</td></tr>
+    <tr><td headers="East Asia &amp; Pacific  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Japan</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M0 0h512v512H0z"></path><circle cx="256" cy="256" r="111.3" fill="#d80027"></circle></g></svg></span></td>
+<td headers="East Asia &amp; Pacific  Name" class="gt_row gt_left">All Nippon Airways</td>
+<td headers="East Asia &amp; Pacific  Country" class="gt_row gt_left">Japan</td>
+<td headers="East Asia &amp; Pacific  passenger_count" class="gt_row gt_right">33,434,565</td></tr>
+    <tr><td headers="East Asia &amp; Pacific  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Australia</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#0052b4" d="M0 0h512v512H0z"></path><path fill="#eee" d="m154 300 14 30 32-8-14 30 25 20-32 7 1 33-26-21-26 21 1-33-33-7 26-20-14-30 32 8zm222-27h47l-38 27 15-44 14 44zm7-162 7 15 16-4-7 15 12 10-15 3v17l-13-11-13 11v-17l-15-3 12-10-7-15 16 4zm57 67 7 15 16-4-7 15 12 10-15 3v16l-13-10-13 11v-17l-15-3 12-10-7-15 16 4zm-122 22 7 15 16-4-7 15 12 10-15 3v16l-13-10-13 11v-17l-15-3 12-10-7-15 16 4zm65 156 7 15 16-4-7 15 12 10-15 3v17l-13-11-13 11v-17l-15-3 12-10-7-15 16 4zM0 0v32l32 32L0 96v160h32l32-32 32 32h32v-83l83 83h45l-8-16 8-15v-14l-83-83h83V96l-32-32 32-32V0H96L64 32 32 0Z"></path><path fill="#d80027" d="M32 0v32H0v64h32v160h64V96h160V32H96V0Zm96 128 128 128v-31l-97-97z"></path></g></svg></span></td>
+<td headers="East Asia &amp; Pacific  Name" class="gt_row gt_left">Qantas</td>
+<td headers="East Asia &amp; Pacific  Country" class="gt_row gt_left">Australia</td>
+<td headers="East Asia &amp; Pacific  passenger_count" class="gt_row gt_right">32,445,150</td></tr>
+    <tr><td headers="East Asia &amp; Pacific  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Taiwan</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#d80027" d="M0 256 256 0h256v512H0z"></path><path fill="#0052b4" d="M256 256V0H0v256z"></path><path fill="#eee" d="m222.6 149.8-31.3 14.7 16.7 30.3-34-6.5-4.3 34.3-23.6-25.2-23.7 25.2-4.3-34.3-34 6.5 16.7-30.3-31.2-14.7 31.2-14.7-16.6-30.3 34 6.5 4.2-34.3 23.7 25.3L169.7 77l4.3 34.3 34-6.5-16.7 30.3z"></path><circle cx="146.1" cy="149.8" r="47.7" fill="#0052b4"></circle><circle cx="146.1" cy="149.8" r="41.5" fill="#eee"></circle></g></svg></span></td>
+<td headers="East Asia &amp; Pacific  Name" class="gt_row gt_left">EVA Air</td>
+<td headers="East Asia &amp; Pacific  Country" class="gt_row gt_left">Taiwan</td>
+<td headers="East Asia &amp; Pacific  passenger_count" class="gt_row gt_right">30,639,802</td></tr>
+    <tr><td headers="East Asia &amp; Pacific  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Singapore</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="m0 256 257.7-51L512 256v256H0z"></path><path fill="#d80027" d="M0 0h512v256H0z"></path><g fill="#eee"><path d="M155.8 133.6A78 78 0 0 1 217 57.5a78.2 78.2 0 0 0-16.7-1.8 78 78 0 1 0 16.7 154 78 78 0 0 1-61.2-76.1zM256 61.2l5.5 17h18l-14.6 10.5 5.6 17L256 95.2l-14.5 10.5 5.6-17-14.5-10.5h17.9z"></path><path d="m212.6 94.6 5.6 17H236l-14.4 10.5 5.5 17-14.5-10.5-14.4 10.5 5.5-17-14.5-10.5h17.9zm86.8 0 5.5 17h17.9l-14.5 10.5 5.5 17-14.4-10.5-14.5 10.5 5.5-17-14.4-10.5h17.8zm-16.7 50.1 5.5 17h17.9l-14.5 10.5 5.5 17-14.4-10.5-14.5 10.5 5.5-17-14.4-10.5h17.9zm-53.4 0 5.5 17h18l-14.5 10.5 5.5 17-14.5-10.5-14.4 10.5 5.5-17-14.5-10.5h17.9z"></path></g></g></svg></span></td>
+<td headers="East Asia &amp; Pacific  Name" class="gt_row gt_left">Singapore Airlines</td>
+<td headers="East Asia &amp; Pacific  Country" class="gt_row gt_left">Singapore</td>
+<td headers="East Asia &amp; Pacific  passenger_count" class="gt_row gt_right">29,169,629</td></tr>
+    <tr><td headers="East Asia &amp; Pacific  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Singapore</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="m0 256 257.7-51L512 256v256H0z"></path><path fill="#d80027" d="M0 0h512v256H0z"></path><g fill="#eee"><path d="M155.8 133.6A78 78 0 0 1 217 57.5a78.2 78.2 0 0 0-16.7-1.8 78 78 0 1 0 16.7 154 78 78 0 0 1-61.2-76.1zM256 61.2l5.5 17h18l-14.6 10.5 5.6 17L256 95.2l-14.5 10.5 5.6-17-14.5-10.5h17.9z"></path><path d="m212.6 94.6 5.6 17H236l-14.4 10.5 5.5 17-14.5-10.5-14.4 10.5 5.5-17-14.5-10.5h17.9zm86.8 0 5.5 17h17.9l-14.5 10.5 5.5 17-14.4-10.5-14.5 10.5 5.5-17-14.4-10.5h17.8zm-16.7 50.1 5.5 17h17.9l-14.5 10.5 5.5 17-14.4-10.5-14.5 10.5 5.5-17-14.4-10.5h17.9zm-53.4 0 5.5 17h18l-14.5 10.5 5.5 17-14.5-10.5-14.4 10.5 5.5-17-14.5-10.5h17.9z"></path></g></g></svg></span></td>
+<td headers="East Asia &amp; Pacific  Name" class="gt_row gt_left">Singapore Airlines Cargo</td>
+<td headers="East Asia &amp; Pacific  Country" class="gt_row gt_left">Singapore</td>
+<td headers="East Asia &amp; Pacific  passenger_count" class="gt_row gt_right">29,169,629</td></tr>
+    <tr><td headers="East Asia &amp; Pacific  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Taiwan</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#d80027" d="M0 256 256 0h256v512H0z"></path><path fill="#0052b4" d="M256 256V0H0v256z"></path><path fill="#eee" d="m222.6 149.8-31.3 14.7 16.7 30.3-34-6.5-4.3 34.3-23.6-25.2-23.7 25.2-4.3-34.3-34 6.5 16.7-30.3-31.2-14.7 31.2-14.7-16.6-30.3 34 6.5 4.2-34.3 23.7 25.3L169.7 77l4.3 34.3 34-6.5-16.7 30.3z"></path><circle cx="146.1" cy="149.8" r="47.7" fill="#0052b4"></circle><circle cx="146.1" cy="149.8" r="41.5" fill="#eee"></circle></g></svg></span></td>
+<td headers="East Asia &amp; Pacific  Name" class="gt_row gt_left">China Airlines</td>
+<td headers="East Asia &amp; Pacific  Country" class="gt_row gt_left">Taiwan</td>
+<td headers="East Asia &amp; Pacific  passenger_count" class="gt_row gt_right">28,698,779</td></tr>
+    <tr><td headers="East Asia &amp; Pacific  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>New Zealand</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#0052b4" d="M256 0h256v512H0V256Z"></path><path fill="#eee" d="M0 0v32l32 32L0 96v160h32l32-32 32 32h32v-83l83 83h45l-8-16 8-15v-14l-83-83h83V96l-32-32 32-32V0H96L64 32 32 0Zm382 92-11 35h-37l30 21-12 35 30-22 30 22-12-35 30-21h-37l-11-35Zm61 72-11 35h-37l30 21-11 35 29-21 30 21-12-35 30-21h-37Zm-123 10-11 35h-37l30 22-11 35 29-22 30 22-11-35 29-22h-36zm59 130-11 35h-37l30 21-11 35 29-21 30 21-11-35 29-21h-36z"></path><path fill="#d80027" d="M32 0v32H0v64h32v160h64V96h160V32H96V0Zm96 128 128 128v-31l-97-97zm251 201-5 18h-19l15 10-6 18 15-11 15 11-5-18 14-10h-18Zm-59-129-5 17h-19l15 11-6 17 15-11 15 11-6-17 15-11h-18l-6-17zm123-11-6 18h-18l15 11-6 17 15-11 15 11-6-17 15-11h-18l-6-18zm-61-72-6 17h-18l15 11-6 17 15-10 15 10-6-17 15-11h-18z"></path></g></svg></span></td>
+<td headers="East Asia &amp; Pacific  Name" class="gt_row gt_left">Air New Zealand</td>
+<td headers="East Asia &amp; Pacific  Country" class="gt_row gt_left">New Zealand</td>
+<td headers="East Asia &amp; Pacific  passenger_count" class="gt_row gt_right">28,236,946</td></tr>
+    <tr><td headers="East Asia &amp; Pacific  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Korea, Rep.</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M0 0h512v512H0Z"></path><path fill="#333" d="m350 335 24-24 16 16-24 23zm-39 39 24-24 15 16-23 24zm87 8 23-24 16 16-24 24zm-40 39 24-23 16 15-24 24Zm16-63 24-23 15 15-23 24zm-39 40 23-24 16 16-24 23zm63-221-63-63 15-15 64 63zm-63-15-24-24 16-16 23 24zm39 39-24-24 16-15 24 23zm8-87-24-23 16-16 24 24Zm39 40-23-24 15-16 24 24ZM91 358l63 63-16 16-63-63zm63 16 23 24-15 15-24-23zm-40-39 24 23-16 16-23-24zm24-24 63 63-16 16-63-63zm16-220-63 63-16-16 63-63zm23 23-63 63-15-16 63-63zm24 24-63 63-16-16 63-63z"></path><path fill="#d80027" d="M319 319 193 193a89 89 0 1 1 126 126z"></path><path fill="#0052b4" d="M319 319a89 89 0 1 1-126-126z"></path><circle cx="224.5" cy="224.5" r="44.5" fill="#d80027"></circle><circle cx="287.5" cy="287.5" r="44.5" fill="#0052b4"></circle></g></svg></span></td>
+<td headers="East Asia &amp; Pacific  Name" class="gt_row gt_left">Asiana Airlines</td>
+<td headers="East Asia &amp; Pacific  Country" class="gt_row gt_left">Republic of Korea</td>
+<td headers="East Asia &amp; Pacific  passenger_count" class="gt_row gt_right">24,454,884</td></tr>
+    <tr><td headers="East Asia &amp; Pacific  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Korea, Rep.</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M0 0h512v512H0Z"></path><path fill="#333" d="m350 335 24-24 16 16-24 23zm-39 39 24-24 15 16-23 24zm87 8 23-24 16 16-24 24zm-40 39 24-23 16 15-24 24Zm16-63 24-23 15 15-23 24zm-39 40 23-24 16 16-24 23zm63-221-63-63 15-15 64 63zm-63-15-24-24 16-16 23 24zm39 39-24-24 16-15 24 23zm8-87-24-23 16-16 24 24Zm39 40-23-24 15-16 24 24ZM91 358l63 63-16 16-63-63zm63 16 23 24-15 15-24-23zm-40-39 24 23-16 16-23-24zm24-24 63 63-16 16-63-63zm16-220-63 63-16-16 63-63zm23 23-63 63-15-16 63-63zm24 24-63 63-16-16 63-63z"></path><path fill="#d80027" d="M319 319 193 193a89 89 0 1 1 126 126z"></path><path fill="#0052b4" d="M319 319a89 89 0 1 1-126-126z"></path><circle cx="224.5" cy="224.5" r="44.5" fill="#d80027"></circle><circle cx="287.5" cy="287.5" r="44.5" fill="#0052b4"></circle></g></svg></span></td>
+<td headers="East Asia &amp; Pacific  Name" class="gt_row gt_left">Tway Airlines</td>
+<td headers="East Asia &amp; Pacific  Country" class="gt_row gt_left">South Korea</td>
+<td headers="East Asia &amp; Pacific  passenger_count" class="gt_row gt_right">22,056,362</td></tr>
+    <tr><td headers="East Asia &amp; Pacific  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Philippines</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#0052b4" d="M0 0h512v256l-265 45.2z"></path><path fill="#d80027" d="M210 256h302v256H0z"></path><path fill="#eee" d="M0 0v512l256-256z"></path><path fill="#ffda44" d="M175.3 256 144 241.3l16.7-30.3-34 6.5-4.3-34.3-23.6 25.2L75 183.2l-4.3 34.3-34-6.5 16.7 30.3L22.3 256l31.2 14.7L37 301l34-6.5 4.2 34.3 23.7-25.2 23.6 25.2 4.3-34.3 34 6.5-16.7-30.3zm-107-155.8 10.4 14.5 17-5.4-10.6 14.4 10.4 14.5-17-5.6L68 147l.2-17.9-17-5.6 17-5.4zm0 264.8 10.4 14.6 17-5.4-10.6 14.3 10.4 14.6-17-5.7L68 411.8l.2-17.9-17-5.6 17-5.4zm148.4-132.4L206.3 247l-17-5.4 10.5 14.4-10.4 14.6 17-5.7 10.6 14.4-.1-17.9 17-5.6-17.1-5.4z"></path></g></svg></span></td>
+<td headers="East Asia &amp; Pacific  Name" class="gt_row gt_left">Philippine Airlines</td>
+<td headers="East Asia &amp; Pacific  Country" class="gt_row gt_left">Philippines</td>
+<td headers="East Asia &amp; Pacific  passenger_count" class="gt_row gt_right">20,699,120</td></tr>
+    <tr><td headers="East Asia &amp; Pacific  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Japan</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M0 0h512v512H0z"></path><circle cx="256" cy="256" r="111.3" fill="#d80027"></circle></g></svg></span></td>
+<td headers="East Asia &amp; Pacific  Name" class="gt_row gt_left">JALways</td>
+<td headers="East Asia &amp; Pacific  Country" class="gt_row gt_left">Japan</td>
+<td headers="East Asia &amp; Pacific  passenger_count" class="gt_row gt_right">17,545,879</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="4" class="gt_group_heading" scope="colgroup" id="Europe &amp;amp; Central Asia">Europe &amp; Central Asia</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="Europe &amp; Central Asia  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>United Kingdom</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="m0 0 8 22-8 23v23l32 54-32 54v32l32 48-32 48v32l32 54-32 54v68l22-8 23 8h23l54-32 54 32h32l48-32 48 32h32l54-32 54 32h68l-8-22 8-23v-23l-32-54 32-54v-32l-32-48 32-48v-32l-32-54 32-54V0l-22 8-23-8h-23l-54 32-54-32h-32l-48 32-48-32h-32l-54 32L68 0H0z"></path><path fill="#0052b4" d="M336 0v108L444 0Zm176 68L404 176h108zM0 176h108L0 68ZM68 0l108 108V0Zm108 512V404L68 512ZM0 444l108-108H0Zm512-108H404l108 108Zm-68 176L336 404v108z"></path><path fill="#d80027" d="M0 0v45l131 131h45L0 0zm208 0v208H0v96h208v208h96V304h208v-96H304V0h-96zm259 0L336 131v45L512 0h-45zM176 336 0 512h45l131-131v-45zm160 0 176 176v-45L381 336h-45z"></path></g></svg></span></td>
+<td headers="Europe &amp; Central Asia  Name" class="gt_row gt_left">British Airways</td>
+<td headers="Europe &amp; Central Asia  Country" class="gt_row gt_left">United Kingdom</td>
+<td headers="Europe &amp; Central Asia  passenger_count" class="gt_row gt_right">186,113,664</td></tr>
+    <tr><td headers="Europe &amp; Central Asia  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Germany</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#ffda44" d="m0 345 256.7-25.5L512 345v167H0z"></path><path fill="#d80027" d="m0 167 255-23 257 23v178H0z"></path><path fill="#333" d="M0 0h512v167H0z"></path></g></svg></span></td>
+<td headers="Europe &amp; Central Asia  Name" class="gt_row gt_left">Lufthansa</td>
+<td headers="Europe &amp; Central Asia  Country" class="gt_row gt_left">Germany</td>
+<td headers="Europe &amp; Central Asia  passenger_count" class="gt_row gt_right">131,301,366</td></tr>
+    <tr><td headers="Europe &amp; Central Asia  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Germany</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#ffda44" d="m0 345 256.7-25.5L512 345v167H0z"></path><path fill="#d80027" d="m0 167 255-23 257 23v178H0z"></path><path fill="#333" d="M0 0h512v167H0z"></path></g></svg></span></td>
+<td headers="Europe &amp; Central Asia  Name" class="gt_row gt_left">Lufthansa Cargo</td>
+<td headers="Europe &amp; Central Asia  Country" class="gt_row gt_left">Germany</td>
+<td headers="Europe &amp; Central Asia  passenger_count" class="gt_row gt_right">131,301,366</td></tr>
+    <tr><td headers="Europe &amp; Central Asia  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>France</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M167 0h178l25.9 252.3L345 512H167l-29.8-253.4z"></path><path fill="#0052b4" d="M0 0h167v512H0z"></path><path fill="#d80027" d="M345 0h167v512H345z"></path></g></svg></span></td>
+<td headers="Europe &amp; Central Asia  Name" class="gt_row gt_left">Air France</td>
+<td headers="Europe &amp; Central Asia  Country" class="gt_row gt_left">France</td>
+<td headers="Europe &amp; Central Asia  passenger_count" class="gt_row gt_right">94,650,298</td></tr>
+    <tr><td headers="Europe &amp; Central Asia  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>United Kingdom</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="m0 0 8 22-8 23v23l32 54-32 54v32l32 48-32 48v32l32 54-32 54v68l22-8 23 8h23l54-32 54 32h32l48-32 48 32h32l54-32 54 32h68l-8-22 8-23v-23l-32-54 32-54v-32l-32-48 32-48v-32l-32-54 32-54V0l-22 8-23-8h-23l-54 32-54-32h-32l-48 32-48-32h-32l-54 32L68 0H0z"></path><path fill="#0052b4" d="M336 0v108L444 0Zm176 68L404 176h108zM0 176h108L0 68ZM68 0l108 108V0Zm108 512V404L68 512ZM0 444l108-108H0Zm512-108H404l108 108Zm-68 176L336 404v108z"></path><path fill="#d80027" d="M0 0v45l131 131h45L0 0zm208 0v208H0v96h208v208h96V304h208v-96H304V0h-96zm259 0L336 131v45L512 0h-45zM176 336 0 512h45l131-131v-45zm160 0 176 176v-45L381 336h-45z"></path></g></svg></span></td>
+<td headers="Europe &amp; Central Asia  Name" class="gt_row gt_left">Virgin Atlantic Airways</td>
+<td headers="Europe &amp; Central Asia  Country" class="gt_row gt_left">United Kingdom</td>
+<td headers="Europe &amp; Central Asia  passenger_count" class="gt_row gt_right">89,973,371</td></tr>
+    <tr><td headers="Europe &amp; Central Asia  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Netherlands</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="m0 167 253.8-19.3L512 167v178l-254.9 32.3L0 345z"></path><path fill="#a2001d" d="M0 0h512v167H0z"></path><path fill="#0052b4" d="M0 345h512v167H0z"></path></g></svg></span></td>
+<td headers="Europe &amp; Central Asia  Name" class="gt_row gt_left">KLM Royal Dutch Airlines</td>
+<td headers="Europe &amp; Central Asia  Country" class="gt_row gt_left">Netherlands</td>
+<td headers="Europe &amp; Central Asia  passenger_count" class="gt_row gt_right">54,175,796</td></tr>
+    <tr><td headers="Europe &amp; Central Asia  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Ireland</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M167 0h178l25.9 252.3L345 512H167l-29.8-253.4z"></path><path fill="#6da544" d="M0 0h167v512H0z"></path><path fill="#ff9811" d="M345 0h167v512H345z"></path></g></svg></span></td>
+<td headers="Europe &amp; Central Asia  Name" class="gt_row gt_left">Aer Lingus</td>
+<td headers="Europe &amp; Central Asia  Country" class="gt_row gt_left">Ireland</td>
+<td headers="Europe &amp; Central Asia  passenger_count" class="gt_row gt_right">36,769,584</td></tr>
+    <tr><td headers="Europe &amp; Central Asia  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Spain</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#ffda44" d="m0 128 256-32 256 32v256l-256 32L0 384Z"></path><path fill="#d80027" d="M0 0h512v128H0zm0 384h512v128H0z"></path><g fill="#eee"><path d="M144 304h-16v-80h16zm128 0h16v-80h-16z"></path><ellipse cx="208" cy="296" rx="48" ry="32"></ellipse></g><g fill="#d80027"><rect width="16" height="24" x="128" y="192" rx="8"></rect><rect width="16" height="24" x="272" y="192" rx="8"></rect><path d="M208 272v24a24 24 0 0 0 24 24 24 24 0 0 0 24-24v-24h-24z"></path></g><rect width="32" height="16" x="120" y="208" fill="#ff9811" ry="8"></rect><rect width="32" height="16" x="264" y="208" fill="#ff9811" ry="8"></rect><rect width="32" height="16" x="120" y="304" fill="#ff9811" rx="8"></rect><rect width="32" height="16" x="264" y="304" fill="#ff9811" rx="8"></rect><path fill="#ff9811" d="M160 272v24c0 8 4 14 9 19l5-6 5 10a21 21 0 0 0 10 0l5-10 5 6c6-5 9-11 9-19v-24h-9l-5 8-5-8h-10l-5 8-5-8z"></path><path d="M122 252h172m-172 24h28m116 0h28"></path><path fill="#d80027" d="M122 248a4 4 0 0 0-4 4 4 4 0 0 0 4 4h172a4 4 0 0 0 4-4 4 4 0 0 0-4-4zm0 24a4 4 0 0 0-4 4 4 4 0 0 0 4 4h28a4 4 0 0 0 4-4 4 4 0 0 0-4-4zm144 0a4 4 0 0 0-4 4 4 4 0 0 0 4 4h28a4 4 0 0 0 4-4 4 4 0 0 0-4-4z"></path><path fill="#eee" d="M196 168c-7 0-13 5-15 11l-5-1c-9 0-16 7-16 16s7 16 16 16c7 0 13-4 15-11a16 16 0 0 0 17-4 16 16 0 0 0 17 4 16 16 0 1 0 10-20 16 16 0 0 0-27-5c-3-4-7-6-12-6zm0 8c5 0 8 4 8 8 0 5-3 8-8 8-4 0-8-3-8-8 0-4 4-8 8-8zm24 0c5 0 8 4 8 8 0 5-3 8-8 8-4 0-8-3-8-8 0-4 4-8 8-8zm-44 10 4 1 4 8c0 4-4 7-8 7s-8-3-8-8c0-4 4-8 8-8zm64 0c5 0 8 4 8 8 0 5-3 8-8 8-4 0-8-3-8-7l4-8z"></path><path fill="none" d="M220 284v12c0 7 5 12 12 12s12-5 12-12v-12z"></path><path fill="#ff9811" d="M200 160h16v32h-16z"></path><path fill="#eee" d="M208 224h48v48h-48z"></path><path fill="#d80027" d="m248 208-8 8h-64l-8-8c0-13 18-24 40-24s40 11 40 24zm-88 16h48v48h-48z"></path><rect width="20" height="32" x="222" y="232" fill="#d80027" rx="10" ry="10"></rect><path fill="#ff9811" d="M168 232v8h8v16h-8v8h32v-8h-8v-16h8v-8zm8-16h64v8h-64z"></path><g fill="#ffda44"><circle cx="186" cy="202" r="6"></circle><circle cx="208" cy="202" r="6"></circle><circle cx="230" cy="202" r="6"></circle></g><path fill="#d80027" d="M169 272v43a24 24 0 0 0 10 4v-47h-10zm20 0v47a24 24 0 0 0 10-4v-43h-10z"></path><g fill="#338af3"><circle cx="208" cy="272" r="16"></circle><rect width="32" height="16" x="264" y="320" ry="8"></rect><rect width="32" height="16" x="120" y="320" ry="8"></rect></g></g></svg></span></td>
+<td headers="Europe &amp; Central Asia  Name" class="gt_row gt_left">Iberia Airlines</td>
+<td headers="Europe &amp; Central Asia  Country" class="gt_row gt_left">Spain</td>
+<td headers="Europe &amp; Central Asia  passenger_count" class="gt_row gt_right">32,210,170</td></tr>
+    <tr><td headers="Europe &amp; Central Asia  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Italy</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M167 0h178l25.9 252.3L345 512H167l-29.8-253.4z"></path><path fill="#6da544" d="M0 0h167v512H0z"></path><path fill="#d80027" d="M345 0h167v512H345z"></path></g></svg></span></td>
+<td headers="Europe &amp; Central Asia  Name" class="gt_row gt_left">Alitalia</td>
+<td headers="Europe &amp; Central Asia  Country" class="gt_row gt_left">Italy</td>
+<td headers="Europe &amp; Central Asia  passenger_count" class="gt_row gt_right">30,241,134</td></tr>
+    <tr><td headers="Europe &amp; Central Asia  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Sweden</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#0052b4" d="M0 0h133.6l35.3 16.7L200.3 0H512v222.6l-22.6 31.7 22.6 35.1V512H200.3l-32-19.8-34.7 19.8H0V289.4l22.1-33.3L0 222.6z"></path><path fill="#ffda44" d="M133.6 0v222.6H0v66.8h133.6V512h66.7V289.4H512v-66.8H200.3V0z"></path></g></svg></span></td>
+<td headers="Europe &amp; Central Asia  Name" class="gt_row gt_left">Scandinavian Airlines System</td>
+<td headers="Europe &amp; Central Asia  Country" class="gt_row gt_left">Sweden</td>
+<td headers="Europe &amp; Central Asia  passenger_count" class="gt_row gt_right">27,360,429</td></tr>
+    <tr><td headers="Europe &amp; Central Asia  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Turkiye</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#d80027" d="M0 0h512v512H0z"></path><g fill="#eee"><path d="m245.5 209.2 21 29 34-11.1-21 29 21 28.9-34-11.1-21 29V267l-34-11.1 34-11z"></path><path d="M188.2 328.3a72.3 72.3 0 1 1 34.4-136 89 89 0 1 0 0 127.3 72 72 0 0 1-34.4 8.7z"></path></g></g></svg></span></td>
+<td headers="Europe &amp; Central Asia  Name" class="gt_row gt_left">Turkish Airlines</td>
+<td headers="Europe &amp; Central Asia  Country" class="gt_row gt_left">Turkey</td>
+<td headers="Europe &amp; Central Asia  passenger_count" class="gt_row gt_right">25,787,537</td></tr>
+    <tr><td headers="Europe &amp; Central Asia  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Switzerland</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#d80027" d="M0 0h512v512H0z"></path><path fill="#eee" d="M389.6 211.5h-89v-89h-89.1v89h-89v89h89v89h89v-89h89z"></path></g></svg></span></td>
+<td headers="Europe &amp; Central Asia  Name" class="gt_row gt_left">Swiss International Air Lines</td>
+<td headers="Europe &amp; Central Asia  Country" class="gt_row gt_left">Switzerland</td>
+<td headers="Europe &amp; Central Asia  passenger_count" class="gt_row gt_right">23,537,652</td></tr>
+    <tr><td headers="Europe &amp; Central Asia  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Iceland</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#0052b4" d="M0 0h100.2l66.1 53.5L233.7 0H512v189.3L466.3 257l45.7 65.8V512H233.7l-68-50.7-65.5 50.7H0V322.8l51.4-68.5-51.4-65z"></path><path fill="#eee" d="M100.2 0v189.3H0v33.4l24.6 33L0 289.5v33.4h100.2V512h33.4l30.6-26.3 36.1 26.3h33.4V322.8H512v-33.4l-24.6-33.7 24.6-33v-33.4H233.7V0h-33.4l-33.8 25.3L133.6 0z"></path><path fill="#d80027" d="M133.6 0v222.7H0v66.7h133.6V512h66.7V289.4H512v-66.7H200.3V0z"></path></g></svg></span></td>
+<td headers="Europe &amp; Central Asia  Name" class="gt_row gt_left">Icelandair</td>
+<td headers="Europe &amp; Central Asia  Country" class="gt_row gt_left">Iceland</td>
+<td headers="Europe &amp; Central Asia  passenger_count" class="gt_row gt_right">18,026,178</td></tr>
+    <tr><td headers="Europe &amp; Central Asia  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Switzerland</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#d80027" d="M0 0h512v512H0z"></path><path fill="#eee" d="M389.6 211.5h-89v-89h-89.1v89h-89v89h89v89h89v-89h89z"></path></g></svg></span></td>
+<td headers="Europe &amp; Central Asia  Name" class="gt_row gt_left">Swissair</td>
+<td headers="Europe &amp; Central Asia  Country" class="gt_row gt_left">Switzerland</td>
+<td headers="Europe &amp; Central Asia  passenger_count" class="gt_row gt_right">13,578,891</td></tr>
+    <tr><td headers="Europe &amp; Central Asia  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Norway</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#d80027" d="M0 0h100.2l66.1 53.5L233.7 0H512v189.3L466.3 257l45.7 65.8V512H233.7l-68-50.7-65.5 50.7H0V322.8l51.4-68.5-51.4-65z"></path><path fill="#eee" d="M100.2 0v189.3H0v33.4l24.6 33L0 289.5v33.4h100.2V512h33.4l30.6-26.3 36.1 26.3h33.4V322.8H512v-33.4l-24.6-33.7 24.6-33v-33.4H233.7V0h-33.4l-33.8 25.3L133.6 0z"></path><path fill="#0052b4" d="M133.6 0v222.7H0v66.7h133.6V512h66.7V289.4H512v-66.7H200.3V0z"></path></g></svg></span></td>
+<td headers="Europe &amp; Central Asia  Name" class="gt_row gt_left">Norwegian Air Shuttle</td>
+<td headers="Europe &amp; Central Asia  Country" class="gt_row gt_left">Norway</td>
+<td headers="Europe &amp; Central Asia  passenger_count" class="gt_row gt_right">12,583,235</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="4" class="gt_group_heading" scope="colgroup" id="Latin America &amp;amp; Caribbean">Latin America &amp; Caribbean</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="Latin America &amp; Caribbean  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Mexico</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M144 0h223l33 256-33 256H144l-32-256z"></path><path fill="#496e2d" d="M0 0h144v512H0z"></path><path fill="#d80027" d="M368 0h144v512H368z"></path><path fill="#ffda44" d="M256 277v10h12l10-22z"></path><path fill="#496e2d" d="M160 242a96 96 0 0 0 192 0h-11a85 85 0 0 1-170 0zm39 17-4 2c-2 2-2 6 1 8 15 14 34 22 54 24v17h12v-17c20-2 39-10 54-24 3-2 3-6 1-8s-6-2-8 0a78 78 0 0 1-53 21c-19 0-38-8-53-21z"></path><path fill="#338af3" d="M256 316c-14 0-28-5-40-13l6-9c20 13 48 13 68 0l7 9c-12 8-26 13-41 13z"></path><path fill="#751a46" d="M256 174c22 11 12 33 11 34l-2-4c-5-11-18-18-31-18v11c6 0 11 5 11 11-7 7-9 17-4 26l4 8-13 23 29-7 18 18v-11l11 11 23-11-35-21-5-21 28 16c4 11 12 21 23 26 9-83-42-91-61-91z"></path><path fill="#6da544" d="M222 271c-15 0-33-12-38-40l11-2c4 23 18 31 27 31 3 0 5-1 6-3 0-2 0-3-6-5-3-1-7-2-10-5-10-12 4-24 11-30 1-1 2-2 1-3 0 0-2-2-5-2-7 0-12-4-14-11-2-6 2-13 8-17l5 11c-2 0-2 2-2 4 0 0 1 2 3 2 7 0 14 4 16 9 1 3 2 9-5 15-7 7-11 12-9 15l5 1c5 2 14 5 13 17-1 8-8 13-17 13h-1z"></path><path fill="#ffda44" d="m234 186-12 11v11l18-9c3-1 3-5 1-7z"></path><circle cx="172" cy="275" r="8" fill="#ffda44"></circle><circle cx="189" cy="302" r="8" fill="#ffda44"></circle><circle cx="216" cy="323" r="8" fill="#ffda44"></circle><circle cx="297" cy="323" r="8" fill="#ffda44"></circle><circle cx="324" cy="302" r="8" fill="#ffda44"></circle><circle cx="341" cy="275" r="8" fill="#ffda44"></circle><rect width="34" height="22" x="239" y="299" fill="#ff9811" rx="11" ry="11"></rect></g></svg></span></td>
+<td headers="Latin America &amp; Caribbean  Name" class="gt_row gt_left">AeroMéxico</td>
+<td headers="Latin America &amp; Caribbean  Country" class="gt_row gt_left">Mexico</td>
+<td headers="Latin America &amp; Caribbean  passenger_count" class="gt_row gt_right">64,976,757</td></tr>
+    <tr><td headers="Latin America &amp; Caribbean  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Mexico</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M144 0h223l33 256-33 256H144l-32-256z"></path><path fill="#496e2d" d="M0 0h144v512H0z"></path><path fill="#d80027" d="M368 0h144v512H368z"></path><path fill="#ffda44" d="M256 277v10h12l10-22z"></path><path fill="#496e2d" d="M160 242a96 96 0 0 0 192 0h-11a85 85 0 0 1-170 0zm39 17-4 2c-2 2-2 6 1 8 15 14 34 22 54 24v17h12v-17c20-2 39-10 54-24 3-2 3-6 1-8s-6-2-8 0a78 78 0 0 1-53 21c-19 0-38-8-53-21z"></path><path fill="#338af3" d="M256 316c-14 0-28-5-40-13l6-9c20 13 48 13 68 0l7 9c-12 8-26 13-41 13z"></path><path fill="#751a46" d="M256 174c22 11 12 33 11 34l-2-4c-5-11-18-18-31-18v11c6 0 11 5 11 11-7 7-9 17-4 26l4 8-13 23 29-7 18 18v-11l11 11 23-11-35-21-5-21 28 16c4 11 12 21 23 26 9-83-42-91-61-91z"></path><path fill="#6da544" d="M222 271c-15 0-33-12-38-40l11-2c4 23 18 31 27 31 3 0 5-1 6-3 0-2 0-3-6-5-3-1-7-2-10-5-10-12 4-24 11-30 1-1 2-2 1-3 0 0-2-2-5-2-7 0-12-4-14-11-2-6 2-13 8-17l5 11c-2 0-2 2-2 4 0 0 1 2 3 2 7 0 14 4 16 9 1 3 2 9-5 15-7 7-11 12-9 15l5 1c5 2 14 5 13 17-1 8-8 13-17 13h-1z"></path><path fill="#ffda44" d="m234 186-12 11v11l18-9c3-1 3-5 1-7z"></path><circle cx="172" cy="275" r="8" fill="#ffda44"></circle><circle cx="189" cy="302" r="8" fill="#ffda44"></circle><circle cx="216" cy="323" r="8" fill="#ffda44"></circle><circle cx="297" cy="323" r="8" fill="#ffda44"></circle><circle cx="324" cy="302" r="8" fill="#ffda44"></circle><circle cx="341" cy="275" r="8" fill="#ffda44"></circle><rect width="34" height="22" x="239" y="299" fill="#ff9811" rx="11" ry="11"></rect></g></svg></span></td>
+<td headers="Latin America &amp; Caribbean  Name" class="gt_row gt_left">Mexicana de Aviaci</td>
+<td headers="Latin America &amp; Caribbean  Country" class="gt_row gt_left">Mexico</td>
+<td headers="Latin America &amp; Caribbean  passenger_count" class="gt_row gt_right">54,717,511</td></tr>
+    <tr><td headers="Latin America &amp; Caribbean  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Mexico</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M144 0h223l33 256-33 256H144l-32-256z"></path><path fill="#496e2d" d="M0 0h144v512H0z"></path><path fill="#d80027" d="M368 0h144v512H368z"></path><path fill="#ffda44" d="M256 277v10h12l10-22z"></path><path fill="#496e2d" d="M160 242a96 96 0 0 0 192 0h-11a85 85 0 0 1-170 0zm39 17-4 2c-2 2-2 6 1 8 15 14 34 22 54 24v17h12v-17c20-2 39-10 54-24 3-2 3-6 1-8s-6-2-8 0a78 78 0 0 1-53 21c-19 0-38-8-53-21z"></path><path fill="#338af3" d="M256 316c-14 0-28-5-40-13l6-9c20 13 48 13 68 0l7 9c-12 8-26 13-41 13z"></path><path fill="#751a46" d="M256 174c22 11 12 33 11 34l-2-4c-5-11-18-18-31-18v11c6 0 11 5 11 11-7 7-9 17-4 26l4 8-13 23 29-7 18 18v-11l11 11 23-11-35-21-5-21 28 16c4 11 12 21 23 26 9-83-42-91-61-91z"></path><path fill="#6da544" d="M222 271c-15 0-33-12-38-40l11-2c4 23 18 31 27 31 3 0 5-1 6-3 0-2 0-3-6-5-3-1-7-2-10-5-10-12 4-24 11-30 1-1 2-2 1-3 0 0-2-2-5-2-7 0-12-4-14-11-2-6 2-13 8-17l5 11c-2 0-2 2-2 4 0 0 1 2 3 2 7 0 14 4 16 9 1 3 2 9-5 15-7 7-11 12-9 15l5 1c5 2 14 5 13 17-1 8-8 13-17 13h-1z"></path><path fill="#ffda44" d="m234 186-12 11v11l18-9c3-1 3-5 1-7z"></path><circle cx="172" cy="275" r="8" fill="#ffda44"></circle><circle cx="189" cy="302" r="8" fill="#ffda44"></circle><circle cx="216" cy="323" r="8" fill="#ffda44"></circle><circle cx="297" cy="323" r="8" fill="#ffda44"></circle><circle cx="324" cy="302" r="8" fill="#ffda44"></circle><circle cx="341" cy="275" r="8" fill="#ffda44"></circle><rect width="34" height="22" x="239" y="299" fill="#ff9811" rx="11" ry="11"></rect></g></svg></span></td>
+<td headers="Latin America &amp; Caribbean  Name" class="gt_row gt_left">Volaris</td>
+<td headers="Latin America &amp; Caribbean  Country" class="gt_row gt_left">Mexico</td>
+<td headers="Latin America &amp; Caribbean  passenger_count" class="gt_row gt_right">34,709,702</td></tr>
+    <tr><td headers="Latin America &amp; Caribbean  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Costa Rica</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#0052b4" d="M0 0h512v89l-66.3 167.5L512 423v89H0v-89l69.7-167.3L0 89z"></path><path fill="#eee" d="M0 89h512v78l-39.7 91.1L512 345v78H0v-78l36.3-85.6L0 167z"></path><path fill="#d80027" d="M0 167h512v178H0z"></path></g></svg></span></td>
+<td headers="Latin America &amp; Caribbean  Name" class="gt_row gt_left">Grupo TACA</td>
+<td headers="Latin America &amp; Caribbean  Country" class="gt_row gt_left">Costa Rica</td>
+<td headers="Latin America &amp; Caribbean  passenger_count" class="gt_row gt_right">33,128,833</td></tr>
+    <tr><td headers="Latin America &amp; Caribbean  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Panama</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M0 0h256l256 256v256H256L0 256z"></path><path fill="#0052b4" d="M0 256v256h256V256z"></path><path fill="#d80027" d="M256 0h256v256H256z"></path><path fill="#0052b4" d="m152.4 89 16.6 51h53.6l-43.4 31.6 16.6 51-43.4-31.5-43.4 31.5 16.6-51L82.2 140h53.6z"></path><path fill="#d80027" d="m359.6 289.4 16.6 51h53.6L386.4 372l16.6 51-43.4-31.5-43.4 31.6 16.6-51-43.4-31.6H343z"></path></g></svg></span></td>
+<td headers="Latin America &amp; Caribbean  Name" class="gt_row gt_left">Copa Airlines</td>
+<td headers="Latin America &amp; Caribbean  Country" class="gt_row gt_left">Panama</td>
+<td headers="Latin America &amp; Caribbean  passenger_count" class="gt_row gt_right">32,086,114</td></tr>
+    <tr><td headers="Latin America &amp; Caribbean  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Jamaica</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#333" d="M23.3 488.6 0 465V47.1l23.4-23.7 464 464 24.6-22.6V47.1l-24.5-22.7z"></path><path fill="#6da544" d="M23.3 23.3 47.1 0h417.7l23.8 23.4-464 464L47 512h418l22.6-24.5z"></path><path fill="#ffda44" d="M0 0v47.1L208.8 256 0 464.9V512h47.1L256 303.2 464.9 512H512v-47L303.1 256 512 47.2V0h-47.2L256 208.9 47 0z"></path></g></svg></span></td>
+<td headers="Latin America &amp; Caribbean  Name" class="gt_row gt_left">Air Jamaica</td>
+<td headers="Latin America &amp; Caribbean  Country" class="gt_row gt_left">Jamaica</td>
+<td headers="Latin America &amp; Caribbean  passenger_count" class="gt_row gt_right">24,346,003</td></tr>
+    <tr><td headers="Latin America &amp; Caribbean  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Brazil</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#6da544" d="M0 0h512v512H0z"></path><path fill="#ffda44" d="M256 100.2 467.5 256 256 411.8 44.5 256z"></path><path fill="#eee" d="M174.2 221a87 87 0 0 0-7.2 36.3l162 49.8a88.5 88.5 0 0 0 14.4-34c-40.6-65.3-119.7-80.3-169.1-52z"></path><path fill="#0052b4" d="M255.7 167a89 89 0 0 0-41.9 10.6 89 89 0 0 0-39.6 43.4 181.7 181.7 0 0 1 169.1 52.2 89 89 0 0 0-9-59.4 89 89 0 0 0-78.6-46.8zM212 250.5a149 149 0 0 0-45 6.8 89 89 0 0 0 10.5 40.9 89 89 0 0 0 120.6 36.2 89 89 0 0 0 30.7-27.3A151 151 0 0 0 212 250.5z"></path></g></svg></span></td>
+<td headers="Latin America &amp; Caribbean  Name" class="gt_row gt_left">TAM Brazilian Airlines</td>
+<td headers="Latin America &amp; Caribbean  Country" class="gt_row gt_left">Brazil</td>
+<td headers="Latin America &amp; Caribbean  passenger_count" class="gt_row gt_right">19,067,367</td></tr>
+    <tr><td headers="Latin America &amp; Caribbean  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Trinidad and Tobago</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#d80027" d="M0 110.2 110.2 0H512v401.8L401.8 512H0z"></path><path fill="#eee" d="M110.2 0H63L0 63v47.2L401.8 512H449l63-63v-47.2z"></path><path fill="#333" d="M512 512v-63L63 0H0v63l449 449z"></path></g></svg></span></td>
+<td headers="Latin America &amp; Caribbean  Name" class="gt_row gt_left">Caribbean Airlines</td>
+<td headers="Latin America &amp; Caribbean  Country" class="gt_row gt_left">Trinidad and Tobago</td>
+<td headers="Latin America &amp; Caribbean  passenger_count" class="gt_row gt_right">17,682,116</td></tr>
+    <tr><td headers="Latin America &amp; Caribbean  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Chile</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#d80027" d="m0 256 254.5-51.3L512 256v256H0z"></path><path fill="#0052b4" d="M0 0h256l52.7 132.8L256 256H0z"></path><path fill="#eee" d="M256 0h256v256H256zM152.4 89l16.6 51h53.6l-43.4 31.6 16.6 51-43.4-31.5-43.4 31.5 16.6-51L82.2 140h53.6z"></path></g></svg></span></td>
+<td headers="Latin America &amp; Caribbean  Name" class="gt_row gt_left">LAN Airlines</td>
+<td headers="Latin America &amp; Caribbean  Country" class="gt_row gt_left">Chile</td>
+<td headers="Latin America &amp; Caribbean  passenger_count" class="gt_row gt_right">17,403,215</td></tr>
+    <tr><td headers="Latin America &amp; Caribbean  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Brazil</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#6da544" d="M0 0h512v512H0z"></path><path fill="#ffda44" d="M256 100.2 467.5 256 256 411.8 44.5 256z"></path><path fill="#eee" d="M174.2 221a87 87 0 0 0-7.2 36.3l162 49.8a88.5 88.5 0 0 0 14.4-34c-40.6-65.3-119.7-80.3-169.1-52z"></path><path fill="#0052b4" d="M255.7 167a89 89 0 0 0-41.9 10.6 89 89 0 0 0-39.6 43.4 181.7 181.7 0 0 1 169.1 52.2 89 89 0 0 0-9-59.4 89 89 0 0 0-78.6-46.8zM212 250.5a149 149 0 0 0-45 6.8 89 89 0 0 0 10.5 40.9 89 89 0 0 0 120.6 36.2 89 89 0 0 0 30.7-27.3A151 151 0 0 0 212 250.5z"></path></g></svg></span></td>
+<td headers="Latin America &amp; Caribbean  Name" class="gt_row gt_left">VRG Linhas Aereas</td>
+<td headers="Latin America &amp; Caribbean  Country" class="gt_row gt_left">Brazil</td>
+<td headers="Latin America &amp; Caribbean  passenger_count" class="gt_row gt_right">11,558,664</td></tr>
+    <tr><td headers="Latin America &amp; Caribbean  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Costa Rica</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#0052b4" d="M0 0h512v89l-66.3 167.5L512 423v89H0v-89l69.7-167.3L0 89z"></path><path fill="#eee" d="M0 89h512v78l-39.7 91.1L512 345v78H0v-78l36.3-85.6L0 167z"></path><path fill="#d80027" d="M0 167h512v178H0z"></path></g></svg></span></td>
+<td headers="Latin America &amp; Caribbean  Name" class="gt_row gt_left">LACSA</td>
+<td headers="Latin America &amp; Caribbean  Country" class="gt_row gt_left">Costa Rica</td>
+<td headers="Latin America &amp; Caribbean  passenger_count" class="gt_row gt_right">10,768,352</td></tr>
+    <tr><td headers="Latin America &amp; Caribbean  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Bahamas</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#338af3" d="M0 0h512v167l-37.4 89 37.4 89v167H0l49.6-252z"></path><path fill="#ffda44" d="M108.3 167H512v178H108.3z"></path><path fill="#333" d="M0 0v512l256-256L0 0z"></path></g></svg></span></td>
+<td headers="Latin America &amp; Caribbean  Name" class="gt_row gt_left">Bahamasair</td>
+<td headers="Latin America &amp; Caribbean  Country" class="gt_row gt_left">Bahamas</td>
+<td headers="Latin America &amp; Caribbean  passenger_count" class="gt_row gt_right">10,695,248</td></tr>
+    <tr><td headers="Latin America &amp; Caribbean  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Haiti</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#a2001d" d="m0 256 254.8-41.8L512 256v256H0z"></path><path fill="#0052b4" d="M0 0h512v256H0z"></path><path fill="#eee" d="m345 322.8-89-11.1-89 11V189.3h178z"></path><circle cx="256" cy="267.1" r="44.5" fill="#0052b4"></circle><circle cx="256" cy="267.1" r="22.3" fill="#a2001d"></circle><path fill="#6da544" d="M222.6 211.5h66.8L256 244.9z"></path><path fill="#ffda44" d="M244.9 233.7H267v66.8h-22z"></path><path fill="#6da544" d="M291.6 293.8h-71.2l-53.4 29h178z"></path></g></svg></span></td>
+<td headers="Latin America &amp; Caribbean  Name" class="gt_row gt_left">Pearl Airways</td>
+<td headers="Latin America &amp; Caribbean  Country" class="gt_row gt_left">Haiti</td>
+<td headers="Latin America &amp; Caribbean  passenger_count" class="gt_row gt_right">9,686,777</td></tr>
+    <tr><td headers="Latin America &amp; Caribbean  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Mexico</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M144 0h223l33 256-33 256H144l-32-256z"></path><path fill="#496e2d" d="M0 0h144v512H0z"></path><path fill="#d80027" d="M368 0h144v512H368z"></path><path fill="#ffda44" d="M256 277v10h12l10-22z"></path><path fill="#496e2d" d="M160 242a96 96 0 0 0 192 0h-11a85 85 0 0 1-170 0zm39 17-4 2c-2 2-2 6 1 8 15 14 34 22 54 24v17h12v-17c20-2 39-10 54-24 3-2 3-6 1-8s-6-2-8 0a78 78 0 0 1-53 21c-19 0-38-8-53-21z"></path><path fill="#338af3" d="M256 316c-14 0-28-5-40-13l6-9c20 13 48 13 68 0l7 9c-12 8-26 13-41 13z"></path><path fill="#751a46" d="M256 174c22 11 12 33 11 34l-2-4c-5-11-18-18-31-18v11c6 0 11 5 11 11-7 7-9 17-4 26l4 8-13 23 29-7 18 18v-11l11 11 23-11-35-21-5-21 28 16c4 11 12 21 23 26 9-83-42-91-61-91z"></path><path fill="#6da544" d="M222 271c-15 0-33-12-38-40l11-2c4 23 18 31 27 31 3 0 5-1 6-3 0-2 0-3-6-5-3-1-7-2-10-5-10-12 4-24 11-30 1-1 2-2 1-3 0 0-2-2-5-2-7 0-12-4-14-11-2-6 2-13 8-17l5 11c-2 0-2 2-2 4 0 0 1 2 3 2 7 0 14 4 16 9 1 3 2 9-5 15-7 7-11 12-9 15l5 1c5 2 14 5 13 17-1 8-8 13-17 13h-1z"></path><path fill="#ffda44" d="m234 186-12 11v11l18-9c3-1 3-5 1-7z"></path><circle cx="172" cy="275" r="8" fill="#ffda44"></circle><circle cx="189" cy="302" r="8" fill="#ffda44"></circle><circle cx="216" cy="323" r="8" fill="#ffda44"></circle><circle cx="297" cy="323" r="8" fill="#ffda44"></circle><circle cx="324" cy="302" r="8" fill="#ffda44"></circle><circle cx="341" cy="275" r="8" fill="#ffda44"></circle><rect width="34" height="22" x="239" y="299" fill="#ff9811" rx="11" ry="11"></rect></g></svg></span></td>
+<td headers="Latin America &amp; Caribbean  Name" class="gt_row gt_left">Interjet (ABC Aerolineas)</td>
+<td headers="Latin America &amp; Caribbean  Country" class="gt_row gt_left">Mexico</td>
+<td headers="Latin America &amp; Caribbean  passenger_count" class="gt_row gt_right">9,545,038</td></tr>
+    <tr><td headers="Latin America &amp; Caribbean  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Argentina</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#338af3" d="M0 0h512v144.7L488 256l24 111.3V512H0V367.3L26 256 0 144.7z"></path><path fill="#eee" d="M0 144.7h512v222.6H0z"></path><path fill="#ffda44" d="m332.4 256-31.2 14.7 16.7 30.3-34-6.5-4.2 34.3-23.7-25.2-23.6 25.2-4.3-34.3-34 6.5 16.6-30.3-31.2-14.7 31.3-14.7L194 211l34 6.5 4.3-34.3 23.6 25.2 23.6-25.2 4.4 34.3 34-6.5-16.7 30.3z"></path></g></svg></span></td>
+<td headers="Latin America &amp; Caribbean  Name" class="gt_row gt_left">Aerolineas Argentinas</td>
+<td headers="Latin America &amp; Caribbean  Country" class="gt_row gt_left">Argentina</td>
+<td headers="Latin America &amp; Caribbean  passenger_count" class="gt_row gt_right">8,699,640</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="4" class="gt_group_heading" scope="colgroup" id="Middle East &amp;amp; North Africa">Middle East &amp; North Africa</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="Middle East &amp; North Africa  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>United Arab Emirates</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#a2001d" d="M0 0h167l52.3 252L167 512H0z"></path><path fill="#eee" d="m167 167 170.8-44.6L512 167v178l-173.2 36.9L167 345z"></path><path fill="#6da544" d="M167 0h345v167H167z"></path><path fill="#333" d="M167 345h345v167H167z"></path></g></svg></span></td>
+<td headers="Middle East &amp; North Africa  Name" class="gt_row gt_left">Emirates</td>
+<td headers="Middle East &amp; North Africa  Country" class="gt_row gt_left">United Arab Emirates</td>
+<td headers="Middle East &amp; North Africa  passenger_count" class="gt_row gt_right">34,911,995</td></tr>
+    <tr><td headers="Middle East &amp; North Africa  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Iran (Islamic Republic)</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M0 144.7 258.8 39.6 512 144.7v222.6L257 493 0 367.3z"></path><path fill="#6da544" d="M0 0v144.7h105.6v-22.2h33.6v22.2h33.3v-22.2h33.6v22.2h33.3v-22.2H273v22.2h33v-22.2h33.6v22.2h33.2v-22.2h33.6v22.2H512V0z"></path><path fill="#d80027" d="M0 367.3V512h512V367.3H406.4v22.4h-33.6v-22.4h-33.2v22.4H306v-22.4h-33v22.4h-33.6v-22.4h-33.3v22.4h-33.6v-22.4h-33.3v22.4h-33.6v-22.4zm339.1-178h-33.4c.2 3.7.4 7.4.4 11.1 0 24.8-6.2 48.8-17 66-3.3 5.2-9 12.6-16.4 17.6v-94.7h-33.4v94.8c-7.5-5-13-12.4-16.4-17.7-10.8-17-17-41-17-65.9 0-3.7.2-7.4.4-11H173a190 190 0 0 0-.4 11c0 68.7 36.7 122.5 83.5 122.5s83.5-53.8 83.5-122.5c0-3.7-.1-7.4-.4-11z"></path></g></svg></span></td>
+<td headers="Middle East &amp; North Africa  Name" class="gt_row gt_left">Caspian Airlines</td>
+<td headers="Middle East &amp; North Africa  Country" class="gt_row gt_left">Iran</td>
+<td headers="Middle East &amp; North Africa  passenger_count" class="gt_row gt_right">23,773,319</td></tr>
+    <tr><td headers="Middle East &amp; North Africa  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Israel</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M0 0h512v55.7l-25 32.7 25 34v267.2l-26 36 26 30.7V512H0v-55.7l24.8-34.1L0 389.6V122.4l27.2-33.2L0 55.7z"></path><path fill="#0052b4" d="M0 55.7v66.7h512V55.7zm0 333.9v66.7h512v-66.7zm352.4-189.3H288l-32-55.6-32.1 55.6h-64.3l32.1 55.7-32 55.7h64.2l32.1 55.6 32.1-55.6h64.3L320.3 256l32-55.7zm-57 55.7-19.7 34.2h-39.4L216.5 256l19.8-34.2h39.4l19.8 34.2zM256 187.6l7.3 12.7h-14.6zm-59.2 34.2h14.7l-7.4 12.7zm0 68.4 7.3-12.7 7.4 12.7zm59.2 34.2-7.3-12.7h14.6zm59.2-34.2h-14.7l7.4-12.7zm-14.7-68.4h14.7l-7.3 12.7z"></path></g></svg></span></td>
+<td headers="Middle East &amp; North Africa  Name" class="gt_row gt_left">El Al Israel Airlines</td>
+<td headers="Middle East &amp; North Africa  Country" class="gt_row gt_left">Israel</td>
+<td headers="Middle East &amp; North Africa  passenger_count" class="gt_row gt_right">20,345,209</td></tr>
+    <tr><td headers="Middle East &amp; North Africa  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Qatar</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M0 0h173l61 255.8L173.4 512H0z"></path><path fill="#751a46" d="m173 0-72.7 30.8L176 63l-75.7 32.2 75.7 32.1-75.7 32.2 75.7 32.1-75.7 32.1 75.7 32.2-75.7 32.2 75.7 32.1-75.7 32.2 75.7 32.1-75.7 32.2 75.7 32.1-75.7 32.2 73.1 31H512V0z"></path></g></svg></span></td>
+<td headers="Middle East &amp; North Africa  Name" class="gt_row gt_left">Qatar Airways</td>
+<td headers="Middle East &amp; North Africa  Country" class="gt_row gt_left">Qatar</td>
+<td headers="Middle East &amp; North Africa  passenger_count" class="gt_row gt_right">20,310,721</td></tr>
+    <tr><td headers="Middle East &amp; North Africa  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Iran (Islamic Republic)</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M0 144.7 258.8 39.6 512 144.7v222.6L257 493 0 367.3z"></path><path fill="#6da544" d="M0 0v144.7h105.6v-22.2h33.6v22.2h33.3v-22.2h33.6v22.2h33.3v-22.2H273v22.2h33v-22.2h33.6v22.2h33.2v-22.2h33.6v22.2H512V0z"></path><path fill="#d80027" d="M0 367.3V512h512V367.3H406.4v22.4h-33.6v-22.4h-33.2v22.4H306v-22.4h-33v22.4h-33.6v-22.4h-33.3v22.4h-33.6v-22.4h-33.3v22.4h-33.6v-22.4zm339.1-178h-33.4c.2 3.7.4 7.4.4 11.1 0 24.8-6.2 48.8-17 66-3.3 5.2-9 12.6-16.4 17.6v-94.7h-33.4v94.8c-7.5-5-13-12.4-16.4-17.7-10.8-17-17-41-17-65.9 0-3.7.2-7.4.4-11H173a190 190 0 0 0-.4 11c0 68.7 36.7 122.5 83.5 122.5s83.5-53.8 83.5-122.5c0-3.7-.1-7.4-.4-11z"></path></g></svg></span></td>
+<td headers="Middle East &amp; North Africa  Name" class="gt_row gt_left">Parmiss Airlines (IPV)</td>
+<td headers="Middle East &amp; North Africa  Country" class="gt_row gt_left">Iran</td>
+<td headers="Middle East &amp; North Africa  passenger_count" class="gt_row gt_right">11,290,833</td></tr>
+    <tr><td headers="Middle East &amp; North Africa  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>United Arab Emirates</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#a2001d" d="M0 0h167l52.3 252L167 512H0z"></path><path fill="#eee" d="m167 167 170.8-44.6L512 167v178l-173.2 36.9L167 345z"></path><path fill="#6da544" d="M167 0h345v167H167z"></path><path fill="#333" d="M167 345h345v167H167z"></path></g></svg></span></td>
+<td headers="Middle East &amp; North Africa  Name" class="gt_row gt_left">Etihad Airways</td>
+<td headers="Middle East &amp; North Africa  Country" class="gt_row gt_left">United Arab Emirates</td>
+<td headers="Middle East &amp; North Africa  passenger_count" class="gt_row gt_right">9,615,218</td></tr>
+    <tr><td headers="Middle East &amp; North Africa  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Jordan</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="m126 158 127.8-10.3L512 167v178l-254.9 32.3L126 335.9z"></path><path fill="#333" d="M0 0h512v167H107z"></path><path fill="#6da544" d="M107 345h405v167H0z"></path><path fill="#d80027" d="M0 0v512l256-256z"></path><path fill="#eee" d="m101.6 200.3 14 29.4 31.8-7.3-14.2 29.3 25.5 20.2-31.8 7.2.1 32.6-25.4-20.4-25.4 20.4V279l-31.7-7.2 25.5-20-14.2-29.4 31.8 7.3z"></path></g></svg></span></td>
+<td headers="Middle East &amp; North Africa  Name" class="gt_row gt_left">Royal Jordanian</td>
+<td headers="Middle East &amp; North Africa  Country" class="gt_row gt_left">Jordan</td>
+<td headers="Middle East &amp; North Africa  passenger_count" class="gt_row gt_right">5,960,959</td></tr>
+    <tr><td headers="Middle East &amp; North Africa  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Saudi Arabia</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#496e2d" d="M0 0h512v512H0z"></path><g fill="#eee"><path d="M144.7 306c0 18.5 15 33.5 33.4 33.5h100.2a27.8 27.8 0 0 0 27.8 27.8h33.4a27.8 27.8 0 0 0 27.8-27.8V306zm225.4-161.3v78c0 12.2-10 22.2-22.3 22.2v33.4c30.7 0 55.7-25 55.7-55.7v-77.9H370zm-239.3 78c0 12.2-10 22.2-22.3 22.2v33.4c30.7 0 55.7-25 55.7-55.7v-77.9h-33.4z"></path><path d="M320 144.7h33.4v78H320zm-50 44.5a5.6 5.6 0 0 1-11.2 0v-44.5h-33.4v44.5a5.6 5.6 0 0 1-11.1 0v-44.5h-33.4v44.5a39 39 0 0 0 39 39 38.7 38.7 0 0 0 22.2-7 38.7 38.7 0 0 0 22.2 7c1.7 0 3.4-.1 5-.3a22.3 22.3 0 0 1-21.6 17v33.4c30.6 0 55.6-25 55.6-55.7v-77.9H270z"></path><path d="M180.9 244.9h50v33.4h-50z"></path></g></g></svg></span></td>
+<td headers="Middle East &amp; North Africa  Name" class="gt_row gt_left">Saudi Arabian Airlines</td>
+<td headers="Middle East &amp; North Africa  Country" class="gt_row gt_left">Saudi Arabia</td>
+<td headers="Middle East &amp; North Africa  passenger_count" class="gt_row gt_right">4,886,473</td></tr>
+    <tr><td headers="Middle East &amp; North Africa  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Morocco</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#d80027" d="M0 0h512v512H0z"></path><path fill="#496e2d" d="M407.3 210H291.7L256 100.3 220.3 210H104.7l93.5 68-35.7 109.8L256 320l93.5 68-35.7-110zm-183 59.5 12.2-37.1h39l12.1 37.1-31.6 23-31.6-23zm44-59.4h-24.6l12.3-37.9zm38.3 45.7-7.7-23.4h39.9zM213 232.4l-7.7 23.4-32.2-23.4zm-8.3 97.3 12.3-38 20 14.5zm70.1-23.4 20-14.5 12.3 37.9z"></path></g></svg></span></td>
+<td headers="Middle East &amp; North Africa  Name" class="gt_row gt_left">Royal Air Maroc</td>
+<td headers="Middle East &amp; North Africa  Country" class="gt_row gt_left">Morocco</td>
+<td headers="Middle East &amp; North Africa  passenger_count" class="gt_row gt_right">4,854,129</td></tr>
+    <tr><td headers="Middle East &amp; North Africa  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Egypt</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="m0 144 256-32 256 32v224l-256 32L0 368Z"></path><path fill="#d80027" d="M0 0h512v144H0Z"></path><path fill="#333" d="M0 368h512v144H0Z"></path><path fill="#ff9811" d="M250 191c-8 0-17 4-22 14 5-3 16-1 16 13 0 4-2 8-5 10-8 0-14-14-29-14-10 0-19 7-19 17v69l46-7-14 27h66l-14-27 46 7v-69c0-10-9-17-19-17-15 0-21 14-29 14 8-23-7-37-23-37z"></path></g></svg></span></td>
+<td headers="Middle East &amp; North Africa  Name" class="gt_row gt_left">Egyptair</td>
+<td headers="Middle East &amp; North Africa  Country" class="gt_row gt_left">Egypt</td>
+<td headers="Middle East &amp; North Africa  passenger_count" class="gt_row gt_right">4,807,794</td></tr>
+    <tr><td headers="Middle East &amp; North Africa  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Kuwait</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M138.4 147 512 167v178l-373.6 20z"></path><path fill="#6da544" d="m0 0 138.4 167H512V0z"></path><path fill="#d80027" d="m0 512 138.4-167H512v167z"></path><path fill="#333" d="M167 167 0 0v512l167-167z"></path></g></svg></span></td>
+<td headers="Middle East &amp; North Africa  Name" class="gt_row gt_left">Kuwait Airways</td>
+<td headers="Middle East &amp; North Africa  Country" class="gt_row gt_left">Kuwait</td>
+<td headers="Middle East &amp; North Africa  passenger_count" class="gt_row gt_right">3,659,022</td></tr>
+    <tr><td headers="Middle East &amp; North Africa  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Djibouti</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#338af3" d="M0 0h512v256l-153.2 35.7L210 256z"></path><path fill="#6da544" d="M210 256h302v256H0z"></path><path fill="#eee" d="M0 0v512l256-256z"></path><path fill="#d80027" d="m103.6 189.2 16.6 51h53.6l-43.4 31.6 16.6 51-43.4-31.5-43.4 31.5 16.6-51-43.4-31.6H87z"></path></g></svg></span></td>
+<td headers="Middle East &amp; North Africa  Name" class="gt_row gt_left">Djibouti Airlines</td>
+<td headers="Middle East &amp; North Africa  Country" class="gt_row gt_left">Djibouti</td>
+<td headers="Middle East &amp; North Africa  passenger_count" class="gt_row gt_right">1,171,981</td></tr>
+    <tr><td headers="Middle East &amp; North Africa  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Israel</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M0 0h512v55.7l-25 32.7 25 34v267.2l-26 36 26 30.7V512H0v-55.7l24.8-34.1L0 389.6V122.4l27.2-33.2L0 55.7z"></path><path fill="#0052b4" d="M0 55.7v66.7h512V55.7zm0 333.9v66.7h512v-66.7zm352.4-189.3H288l-32-55.6-32.1 55.6h-64.3l32.1 55.7-32 55.7h64.2l32.1 55.6 32.1-55.6h64.3L320.3 256l32-55.7zm-57 55.7-19.7 34.2h-39.4L216.5 256l19.8-34.2h39.4l19.8 34.2zM256 187.6l7.3 12.7h-14.6zm-59.2 34.2h14.7l-7.4 12.7zm0 68.4 7.3-12.7 7.4 12.7zm59.2 34.2-7.3-12.7h14.6zm59.2-34.2h-14.7l7.4-12.7zm-14.7-68.4h14.7l-7.3 12.7z"></path></g></svg></span></td>
+<td headers="Middle East &amp; North Africa  Name" class="gt_row gt_left">Dennis Sky</td>
+<td headers="Middle East &amp; North Africa  Country" class="gt_row gt_left">Israel</td>
+<td headers="Middle East &amp; North Africa  passenger_count" class="gt_row gt_right">394,411</td></tr>
+    <tr><td headers="Middle East &amp; North Africa  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Oman</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M189.2 0H512v167l-347.5 24.6z"></path><path fill="#6da544" d="m163 320 349 25v167H189.2z"></path><path fill="#d80027" d="M0 0h189.2v167H512v178H189.2v167H0z"></path><path fill="#eee" d="M156.6 112.7 133 89l-15.7 15.8L101.5 89 78 112.7l15.8 15.7L78 144l23.6 23.6 15.8-15.7 15.7 15.7 23.6-23.6-15.7-15.7z"></path></g></svg></span></td>
+<td headers="Middle East &amp; North Africa  Name" class="gt_row gt_left">Royal Air Force of Oman</td>
+<td headers="Middle East &amp; North Africa  Country" class="gt_row gt_left">Oman</td>
+<td headers="Middle East &amp; North Africa  passenger_count" class="gt_row gt_right">329,674</td></tr>
+    <tr><td headers="Middle East &amp; North Africa  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Israel</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M0 0h512v55.7l-25 32.7 25 34v267.2l-26 36 26 30.7V512H0v-55.7l24.8-34.1L0 389.6V122.4l27.2-33.2L0 55.7z"></path><path fill="#0052b4" d="M0 55.7v66.7h512V55.7zm0 333.9v66.7h512v-66.7zm352.4-189.3H288l-32-55.6-32.1 55.6h-64.3l32.1 55.7-32 55.7h64.2l32.1 55.6 32.1-55.6h64.3L320.3 256l32-55.7zm-57 55.7-19.7 34.2h-39.4L216.5 256l19.8-34.2h39.4l19.8 34.2zM256 187.6l7.3 12.7h-14.6zm-59.2 34.2h14.7l-7.4 12.7zm0 68.4 7.3-12.7 7.4 12.7zm59.2 34.2-7.3-12.7h14.6zm59.2-34.2h-14.7l7.4-12.7zm-14.7-68.4h14.7l-7.3 12.7z"></path></g></svg></span></td>
+<td headers="Middle East &amp; North Africa  Name" class="gt_row gt_left">Israir</td>
+<td headers="Middle East &amp; North Africa  Country" class="gt_row gt_left">Israel</td>
+<td headers="Middle East &amp; North Africa  passenger_count" class="gt_row gt_right">240,834</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="4" class="gt_group_heading" scope="colgroup" id="North America">North America</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="North America  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>United States</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M256 0h256v64l-32 32 32 32v64l-32 32 32 32v64l-32 32 32 32v64l-256 32L0 448v-64l32-32-32-32v-64z"></path><path fill="#d80027" d="M224 64h288v64H224Zm0 128h288v64H256ZM0 320h512v64H0Zm0 128h512v64H0Z"></path><path fill="#0052b4" d="M0 0h256v256H0Z"></path><path fill="#eee" d="m187 243 57-41h-70l57 41-22-67zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67zm162-81 57-41h-70l57 41-22-67zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67Zm162-82 57-41h-70l57 41-22-67Zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67Z"></path></g></svg></span></td>
+<td headers="North America  Name" class="gt_row gt_left">American Airlines</td>
+<td headers="North America  Country" class="gt_row gt_left">United States</td>
+<td headers="North America  passenger_count" class="gt_row gt_right">665,146,793</td></tr>
+    <tr><td headers="North America  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>United States</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M256 0h256v64l-32 32 32 32v64l-32 32 32 32v64l-32 32 32 32v64l-256 32L0 448v-64l32-32-32-32v-64z"></path><path fill="#d80027" d="M224 64h288v64H224Zm0 128h288v64H256ZM0 320h512v64H0Zm0 128h512v64H0Z"></path><path fill="#0052b4" d="M0 0h256v256H0Z"></path><path fill="#eee" d="m187 243 57-41h-70l57 41-22-67zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67zm162-81 57-41h-70l57 41-22-67zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67Zm162-82 57-41h-70l57 41-22-67Zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67Z"></path></g></svg></span></td>
+<td headers="North America  Name" class="gt_row gt_left">United Airlines</td>
+<td headers="North America  Country" class="gt_row gt_left">United States</td>
+<td headers="North America  passenger_count" class="gt_row gt_right">478,740,742</td></tr>
+    <tr><td headers="North America  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>United States</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M256 0h256v64l-32 32 32 32v64l-32 32 32 32v64l-32 32 32 32v64l-256 32L0 448v-64l32-32-32-32v-64z"></path><path fill="#d80027" d="M224 64h288v64H224Zm0 128h288v64H256ZM0 320h512v64H0Zm0 128h512v64H0Z"></path><path fill="#0052b4" d="M0 0h256v256H0Z"></path><path fill="#eee" d="m187 243 57-41h-70l57 41-22-67zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67zm162-81 57-41h-70l57 41-22-67zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67Zm162-82 57-41h-70l57 41-22-67Zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67Z"></path></g></svg></span></td>
+<td headers="North America  Name" class="gt_row gt_left">Delta Air Lines</td>
+<td headers="North America  Country" class="gt_row gt_left">United States</td>
+<td headers="North America  passenger_count" class="gt_row gt_right">433,939,401</td></tr>
+    <tr><td headers="North America  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>United States</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M256 0h256v64l-32 32 32 32v64l-32 32 32 32v64l-32 32 32 32v64l-256 32L0 448v-64l32-32-32-32v-64z"></path><path fill="#d80027" d="M224 64h288v64H224Zm0 128h288v64H256ZM0 320h512v64H0Zm0 128h512v64H0Z"></path><path fill="#0052b4" d="M0 0h256v256H0Z"></path><path fill="#eee" d="m187 243 57-41h-70l57 41-22-67zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67zm162-81 57-41h-70l57 41-22-67zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67Zm162-82 57-41h-70l57 41-22-67Zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67Z"></path></g></svg></span></td>
+<td headers="North America  Name" class="gt_row gt_left">Continental Airlines</td>
+<td headers="North America  Country" class="gt_row gt_left">United States</td>
+<td headers="North America  passenger_count" class="gt_row gt_right">173,782,841</td></tr>
+    <tr><td headers="North America  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>United States</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M256 0h256v64l-32 32 32 32v64l-32 32 32 32v64l-32 32 32 32v64l-256 32L0 448v-64l32-32-32-32v-64z"></path><path fill="#d80027" d="M224 64h288v64H224Zm0 128h288v64H256ZM0 320h512v64H0Zm0 128h512v64H0Z"></path><path fill="#0052b4" d="M0 0h256v256H0Z"></path><path fill="#eee" d="m187 243 57-41h-70l57 41-22-67zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67zm162-81 57-41h-70l57 41-22-67zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67Zm162-82 57-41h-70l57 41-22-67Zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67Z"></path></g></svg></span></td>
+<td headers="North America  Name" class="gt_row gt_left">Continental Express</td>
+<td headers="North America  Country" class="gt_row gt_left">United States</td>
+<td headers="North America  passenger_count" class="gt_row gt_right">173,782,841</td></tr>
+    <tr><td headers="North America  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Canada</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#d80027" d="M0 0v512h144l112-64 112 64h144V0H368L256 64 144 0Z"></path><path fill="#eee" d="M144 0h224v512H144Z"></path><path fill="#d80027" d="m301 289 44-22-22-11v-22l-45 22 23-44h-23l-22-34-22 33h-23l23 45-45-22v22l-22 11 45 22-12 23h45v33h22v-33h45z"></path></g></svg></span></td>
+<td headers="North America  Name" class="gt_row gt_left">Air Canada</td>
+<td headers="North America  Country" class="gt_row gt_left">Canada</td>
+<td headers="North America  passenger_count" class="gt_row gt_right">153,383,968</td></tr>
+    <tr><td headers="North America  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>United States</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M256 0h256v64l-32 32 32 32v64l-32 32 32 32v64l-32 32 32 32v64l-256 32L0 448v-64l32-32-32-32v-64z"></path><path fill="#d80027" d="M224 64h288v64H224Zm0 128h288v64H256ZM0 320h512v64H0Zm0 128h512v64H0Z"></path><path fill="#0052b4" d="M0 0h256v256H0Z"></path><path fill="#eee" d="m187 243 57-41h-70l57 41-22-67zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67zm162-81 57-41h-70l57 41-22-67zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67Zm162-82 57-41h-70l57 41-22-67Zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67Z"></path></g></svg></span></td>
+<td headers="North America  Name" class="gt_row gt_left">Northwest Airlines</td>
+<td headers="North America  Country" class="gt_row gt_left">United States</td>
+<td headers="North America  passenger_count" class="gt_row gt_right">137,845,434</td></tr>
+    <tr><td headers="North America  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>United States</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M256 0h256v64l-32 32 32 32v64l-32 32 32 32v64l-32 32 32 32v64l-256 32L0 448v-64l32-32-32-32v-64z"></path><path fill="#d80027" d="M224 64h288v64H224Zm0 128h288v64H256ZM0 320h512v64H0Zm0 128h512v64H0Z"></path><path fill="#0052b4" d="M0 0h256v256H0Z"></path><path fill="#eee" d="m187 243 57-41h-70l57 41-22-67zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67zm162-81 57-41h-70l57 41-22-67zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67Zm162-82 57-41h-70l57 41-22-67Zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67Z"></path></g></svg></span></td>
+<td headers="North America  Name" class="gt_row gt_left">US Airways</td>
+<td headers="North America  Country" class="gt_row gt_left">United States</td>
+<td headers="North America  passenger_count" class="gt_row gt_right">103,393,413</td></tr>
+    <tr><td headers="North America  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>United States</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M256 0h256v64l-32 32 32 32v64l-32 32 32 32v64l-32 32 32 32v64l-256 32L0 448v-64l32-32-32-32v-64z"></path><path fill="#d80027" d="M224 64h288v64H224Zm0 128h288v64H256ZM0 320h512v64H0Zm0 128h512v64H0Z"></path><path fill="#0052b4" d="M0 0h256v256H0Z"></path><path fill="#eee" d="m187 243 57-41h-70l57 41-22-67zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67zm162-81 57-41h-70l57 41-22-67zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67Zm162-82 57-41h-70l57 41-22-67Zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67Z"></path></g></svg></span></td>
+<td headers="North America  Name" class="gt_row gt_left">JetBlue Airways</td>
+<td headers="North America  Country" class="gt_row gt_left">United States</td>
+<td headers="North America  passenger_count" class="gt_row gt_right">92,000,244</td></tr>
+    <tr><td headers="North America  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Canada</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#d80027" d="M0 0v512h144l112-64 112 64h144V0H368L256 64 144 0Z"></path><path fill="#eee" d="M144 0h224v512H144Z"></path><path fill="#d80027" d="m301 289 44-22-22-11v-22l-45 22 23-44h-23l-22-34-22 33h-23l23 45-45-22v22l-22 11 45 22-12 23h45v33h22v-33h45z"></path></g></svg></span></td>
+<td headers="North America  Name" class="gt_row gt_left">WestJet</td>
+<td headers="North America  Country" class="gt_row gt_left">Canada</td>
+<td headers="North America  passenger_count" class="gt_row gt_right">57,945,080</td></tr>
+    <tr><td headers="North America  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Canada</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#d80027" d="M0 0v512h144l112-64 112 64h144V0H368L256 64 144 0Z"></path><path fill="#eee" d="M144 0h224v512H144Z"></path><path fill="#d80027" d="m301 289 44-22-22-11v-22l-45 22 23-44h-23l-22-34-22 33h-23l23 45-45-22v22l-22 11 45 22-12 23h45v33h22v-33h45z"></path></g></svg></span></td>
+<td headers="North America  Name" class="gt_row gt_left">Air Canada Jazz</td>
+<td headers="North America  Country" class="gt_row gt_left">Canada</td>
+<td headers="North America  passenger_count" class="gt_row gt_right">36,691,224</td></tr>
+    <tr><td headers="North America  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>United States</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M256 0h256v64l-32 32 32 32v64l-32 32 32 32v64l-32 32 32 32v64l-256 32L0 448v-64l32-32-32-32v-64z"></path><path fill="#d80027" d="M224 64h288v64H224Zm0 128h288v64H256ZM0 320h512v64H0Zm0 128h512v64H0Z"></path><path fill="#0052b4" d="M0 0h256v256H0Z"></path><path fill="#eee" d="m187 243 57-41h-70l57 41-22-67zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67zm162-81 57-41h-70l57 41-22-67zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67Zm162-82 57-41h-70l57 41-22-67Zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67Z"></path></g></svg></span></td>
+<td headers="North America  Name" class="gt_row gt_left">Spirit Airlines</td>
+<td headers="North America  Country" class="gt_row gt_left">United States</td>
+<td headers="North America  passenger_count" class="gt_row gt_right">35,417,194</td></tr>
+    <tr><td headers="North America  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>United States</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M256 0h256v64l-32 32 32 32v64l-32 32 32 32v64l-32 32 32 32v64l-256 32L0 448v-64l32-32-32-32v-64z"></path><path fill="#d80027" d="M224 64h288v64H224Zm0 128h288v64H256ZM0 320h512v64H0Zm0 128h512v64H0Z"></path><path fill="#0052b4" d="M0 0h256v256H0Z"></path><path fill="#eee" d="m187 243 57-41h-70l57 41-22-67zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67zm162-81 57-41h-70l57 41-22-67zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67Zm162-82 57-41h-70l57 41-22-67Zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67Z"></path></g></svg></span></td>
+<td headers="North America  Name" class="gt_row gt_left">Southwest Airlines</td>
+<td headers="North America  Country" class="gt_row gt_left">United States</td>
+<td headers="North America  passenger_count" class="gt_row gt_right">29,208,276</td></tr>
+    <tr><td headers="North America  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>United States</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M256 0h256v64l-32 32 32 32v64l-32 32 32 32v64l-32 32 32 32v64l-256 32L0 448v-64l32-32-32-32v-64z"></path><path fill="#d80027" d="M224 64h288v64H224Zm0 128h288v64H256ZM0 320h512v64H0Zm0 128h512v64H0Z"></path><path fill="#0052b4" d="M0 0h256v256H0Z"></path><path fill="#eee" d="m187 243 57-41h-70l57 41-22-67zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67zm162-81 57-41h-70l57 41-22-67zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67Zm162-82 57-41h-70l57 41-22-67Zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67Z"></path></g></svg></span></td>
+<td headers="North America  Name" class="gt_row gt_left">SkyWest</td>
+<td headers="North America  Country" class="gt_row gt_left">United States</td>
+<td headers="North America  passenger_count" class="gt_row gt_right">25,261,104</td></tr>
+    <tr><td headers="North America  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>United States</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M256 0h256v64l-32 32 32 32v64l-32 32 32 32v64l-32 32 32 32v64l-256 32L0 448v-64l32-32-32-32v-64z"></path><path fill="#d80027" d="M224 64h288v64H224Zm0 128h288v64H256ZM0 320h512v64H0Zm0 128h512v64H0Z"></path><path fill="#0052b4" d="M0 0h256v256H0Z"></path><path fill="#eee" d="m187 243 57-41h-70l57 41-22-67zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67zm162-81 57-41h-70l57 41-22-67zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67Zm162-82 57-41h-70l57 41-22-67Zm-81 0 57-41H93l57 41-22-67zm-81 0 57-41H12l57 41-22-67Z"></path></g></svg></span></td>
+<td headers="North America  Name" class="gt_row gt_left">Continental Micronesia</td>
+<td headers="North America  Country" class="gt_row gt_left">United States</td>
+<td headers="North America  passenger_count" class="gt_row gt_right">24,940,427</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="4" class="gt_group_heading" scope="colgroup" id="South Asia">South Asia</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="South Asia  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>India</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="m0 160 256-32 256 32v192l-256 32L0 352z"></path><path fill="#ff9811" d="M0 0h512v160H0Z"></path><path fill="#6da544" d="M0 352h512v160H0Z"></path><circle cx="256" cy="256" r="72" fill="#0052b4"></circle><circle cx="256" cy="256" r="48" fill="#eee"></circle><circle cx="256" cy="256" r="24" fill="#0052b4"></circle></g></svg></span></td>
+<td headers="South Asia  Name" class="gt_row gt_left">Air India Limited</td>
+<td headers="South Asia  Country" class="gt_row gt_left">India</td>
+<td headers="South Asia  passenger_count" class="gt_row gt_right">17,149,447</td></tr>
+    <tr><td headers="South Asia  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Pakistan</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M0 0h133.6l50.2 252.5L133.6 512H0z"></path><path fill="#496e2d" d="M133.6 0H512v512H133.6z"></path><path fill="#eee" d="M365.5 298.3A72.3 72.3 0 1 1 313.7 168a89 89 0 1 0 74.6 103.2 72 72 0 0 1-22.8 27.2zM364 167l18.2 19.6 24.3-11.3-13 23.5 18.2 19.6-26.3-5.1-13 23.4-3.3-26.7-26.1-5 24.4-11.3z"></path></g></svg></span></td>
+<td headers="South Asia  Name" class="gt_row gt_left">Pakistan International Airlines</td>
+<td headers="South Asia  Country" class="gt_row gt_left">Pakistan</td>
+<td headers="South Asia  passenger_count" class="gt_row gt_right">3,309,797</td></tr>
+    <tr><td headers="South Asia  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>India</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="m0 160 256-32 256 32v192l-256 32L0 352z"></path><path fill="#ff9811" d="M0 0h512v160H0Z"></path><path fill="#6da544" d="M0 352h512v160H0Z"></path><circle cx="256" cy="256" r="72" fill="#0052b4"></circle><circle cx="256" cy="256" r="48" fill="#eee"></circle><circle cx="256" cy="256" r="24" fill="#0052b4"></circle></g></svg></span></td>
+<td headers="South Asia  Name" class="gt_row gt_left">Air Costa</td>
+<td headers="South Asia  Country" class="gt_row gt_left">India</td>
+<td headers="South Asia  passenger_count" class="gt_row gt_right">1,703,065</td></tr>
+    <tr><td headers="South Asia  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>India</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="m0 160 256-32 256 32v192l-256 32L0 352z"></path><path fill="#ff9811" d="M0 0h512v160H0Z"></path><path fill="#6da544" d="M0 352h512v160H0Z"></path><circle cx="256" cy="256" r="72" fill="#0052b4"></circle><circle cx="256" cy="256" r="48" fill="#eee"></circle><circle cx="256" cy="256" r="24" fill="#0052b4"></circle></g></svg></span></td>
+<td headers="South Asia  Name" class="gt_row gt_left">Jet Airways</td>
+<td headers="South Asia  Country" class="gt_row gt_left">India</td>
+<td headers="South Asia  passenger_count" class="gt_row gt_right">1,588,447</td></tr>
+    <tr><td headers="South Asia  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Maldives</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#d80027" d="M0 0h512v512H0z"></path><path fill="#6da544" d="M89 133.6h334v244.8H89z"></path><path fill="#eee" d="M297.2 328.3a72.3 72.3 0 1 1 34.4-136 89 89 0 1 0 0 127.3 72 72 0 0 1-34.4 8.7z"></path></g></svg></span></td>
+<td headers="South Asia  Name" class="gt_row gt_left">Maldivo Airlines</td>
+<td headers="South Asia  Country" class="gt_row gt_left">Maldives</td>
+<td headers="South Asia  passenger_count" class="gt_row gt_right">605,247</td></tr>
+    <tr><td headers="South Asia  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>India</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="m0 160 256-32 256 32v192l-256 32L0 352z"></path><path fill="#ff9811" d="M0 0h512v160H0Z"></path><path fill="#6da544" d="M0 352h512v160H0Z"></path><circle cx="256" cy="256" r="72" fill="#0052b4"></circle><circle cx="256" cy="256" r="48" fill="#eee"></circle><circle cx="256" cy="256" r="24" fill="#0052b4"></circle></g></svg></span></td>
+<td headers="South Asia  Name" class="gt_row gt_left">Spicejet</td>
+<td headers="South Asia  Country" class="gt_row gt_left">India</td>
+<td headers="South Asia  passenger_count" class="gt_row gt_right">517,063</td></tr>
+    <tr><td headers="South Asia  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Bangladesh</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#496e2d" d="M0 0h512v512H0z"></path><circle cx="200.3" cy="256" r="111.3" fill="#d80027"></circle></g></svg></span></td>
+<td headers="South Asia  Name" class="gt_row gt_left">Biman Bangladesh Airlines</td>
+<td headers="South Asia  Country" class="gt_row gt_left">Bangladesh</td>
+<td headers="South Asia  passenger_count" class="gt_row gt_right">450,440</td></tr>
+    <tr><td headers="South Asia  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>India</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="m0 160 256-32 256 32v192l-256 32L0 352z"></path><path fill="#ff9811" d="M0 0h512v160H0Z"></path><path fill="#6da544" d="M0 352h512v160H0Z"></path><circle cx="256" cy="256" r="72" fill="#0052b4"></circle><circle cx="256" cy="256" r="48" fill="#eee"></circle><circle cx="256" cy="256" r="24" fill="#0052b4"></circle></g></svg></span></td>
+<td headers="South Asia  Name" class="gt_row gt_left">Air Pegasus</td>
+<td headers="South Asia  Country" class="gt_row gt_left">India</td>
+<td headers="South Asia  passenger_count" class="gt_row gt_right">105,863</td></tr>
+    <tr><td headers="South Asia  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Nepal</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M228.4 0H512v512h-27.4L159.4 258.5z"></path><path fill="#0052b4" d="M510.5 283.8 228.5 0h-39.3l-70.9 253.8L445.2 512h39.4L256.4 283.8h254z"></path><path fill="#d80027" d="M445.2 256 189.2 0H0v512h445.2l-256-256z"></path><path fill="#eee" d="m243.5 378-31.3-14.7L229 333l-34 6.5-4.3-34.3-23.6 25.2-23.7-25.2-4.3 34.3-34-6.5 16.7 30.3L90.4 378l31.3 14.7-16.6 30.3 34-6.5 4.2 34.3 23.7-25.2 23.6 25.2 4.3-34.3 34 6.5-16.7-30.3zM149.8 89l-3.2 25-24.7-4.7 12.1 22-22.7 10.7h-11.1a66.8 66.8 0 0 0 133.5 0h-11.1L200 131.3l12-22-24.6 4.7-3.1-25-17.2 18.4z"></path></g></svg></span></td>
+<td headers="South Asia  Name" class="gt_row gt_left">Himalayan Airlines</td>
+<td headers="South Asia  Country" class="gt_row gt_left">Nepal</td>
+<td headers="South Asia  passenger_count" class="gt_row gt_right">89,668</td></tr>
+    <tr><td headers="South Asia  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Bangladesh</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#496e2d" d="M0 0h512v512H0z"></path><circle cx="200.3" cy="256" r="111.3" fill="#d80027"></circle></g></svg></span></td>
+<td headers="South Asia  Name" class="gt_row gt_left">United Airways</td>
+<td headers="South Asia  Country" class="gt_row gt_left">Bangladesh</td>
+<td headers="South Asia  passenger_count" class="gt_row gt_right">4,761</td></tr>
+    <tr><td headers="South Asia  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Pakistan</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M0 0h133.6l50.2 252.5L133.6 512H0z"></path><path fill="#496e2d" d="M133.6 0H512v512H133.6z"></path><path fill="#eee" d="M365.5 298.3A72.3 72.3 0 1 1 313.7 168a89 89 0 1 0 74.6 103.2 72 72 0 0 1-22.8 27.2zM364 167l18.2 19.6 24.3-11.3-13 23.5 18.2 19.6-26.3-5.1-13 23.4-3.3-26.7-26.1-5 24.4-11.3z"></path></g></svg></span></td>
+<td headers="South Asia  Name" class="gt_row gt_left">Air Indus</td>
+<td headers="South Asia  Country" class="gt_row gt_left">Pakistan</td>
+<td headers="South Asia  passenger_count" class="gt_row gt_right">541</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="4" class="gt_group_heading" scope="colgroup" id="Sub-Saharan Africa">Sub-Saharan Africa</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="Sub-Saharan Africa  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>South Africa</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="m0 0 192 256L0 512h47l465-189v-34l-32-33 32-33v-34L47 0Z"></path><path fill="#333" d="M0 142v228l140-114z"></path><path fill="#ffda44" d="M192 256 0 95v47l114 114L0 370v47z"></path><path fill="#6da544" d="M512 223H223L0 0v94l161 162L0 418v94l223-223h289z"></path><path fill="#d80027" d="M512 0H47l189 189h276z"></path><path fill="#0052b4" d="M512 512H47l189-189h276z"></path></g></svg></span></td>
+<td headers="Sub-Saharan Africa  Name" class="gt_row gt_left">South African Airways</td>
+<td headers="Sub-Saharan Africa  Country" class="gt_row gt_left">South Africa</td>
+<td headers="Sub-Saharan Africa  passenger_count" class="gt_row gt_right">7,951,721</td></tr>
+    <tr><td headers="Sub-Saharan Africa  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Ethiopia</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#d80027" d="m0 345 255.7-31L512 345v167H0z"></path><path fill="#ffda44" d="m0 167 258-40.7L512 167v178H0z"></path><path fill="#6da544" d="M0 0h512v167H0z"></path><circle cx="256" cy="256" r="122.4" fill="#0052b4"></circle><g fill="#ffda44"><path d="m256 161.2 22 68h71.7l-58 42 22.3 68.3-58-42.3-58 42.2 22.2-68.1-58-42H234z"></path><path d="m344.1 273-70-22.9 43.2-59.6-18-13L256 237l-43.3-59.7-18 13.1 43.3 59.7-70.1 22.7 6.9 21.2 70-22.8V345h22.3v-73.7l70.1 22.8z"></path></g></g></svg></span></td>
+<td headers="Sub-Saharan Africa  Name" class="gt_row gt_left">Ethiopian Airlines</td>
+<td headers="Sub-Saharan Africa  Country" class="gt_row gt_left">Ethiopia</td>
+<td headers="Sub-Saharan Africa  passenger_count" class="gt_row gt_right">4,427,402</td></tr>
+    <tr><td headers="Sub-Saharan Africa  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Cabo Verde</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#0052b4" d="M0 0h512v256.2l-41.9 64.3 41.9 63.7V512H0V384.2L41.3 320 0 256.2z"></path><path fill="#eee" d="M0 256.2h512v42.9l-15.7 21.6 15.7 21v42.5H0v-42.5l15.1-21.5L0 299z"></path><path fill="#d80027" d="M0 299.1h512v42.6H0z"></path><path fill="#ffda44" d="m182.8 190.4 5.2 16.4h17.1l-13.8 10 5.3 16.3-13.8-10-14 10 5.4-16.3-13.9-10h17.1zm0 213.3L188 420h17.1l-13.8 10 5.3 16.2-13.8-10-14 10L174 430l-14-10h17.2zm-99.2-72.1 5.2 16.2h17.1L92.1 358l5.2 16.2-13.7-10-14 10L75 358l-14-10.1h17.2zm37.9-119.8 5 16h17.2l-13.8 10.3 5.2 16.2-13.7-10-14 10 5.4-16.3-14-10.1H116zm-60.4 67h17l5.5-16.2 5.2 16.2h17.1L92.1 289l5.2 16.4L83.6 295l-14 10.3 5.4-16.4zm46.5 143 5.3-16.2L99 395.4h17.1l5.4-16.2 5.2 16.3h17.1L130 405.6l5.3 16.2-13.8-10zM282 331.6l-5.4 16.2h-17l13.8 10.2-5.3 16.2 13.9-10 13.8 10-5.2-16.3 13.7-10.1h-17zm-38-119.8-5.3 16.2h-17.1l14 10.2-5.4 16.2 13.9-10 13.8 10-5.3-16.3 13.8-10.1h-17zm60.3 67h-17l-5.3-16.2-5.4 16.2h-17l13.8 10.1-5.3 16.4L282 295l13.8 10.3-5.2-16.4zm-46.4 143-5.3-16.2 13.8-10.2h-17l-5.3-16.2-5.4 16.3h-17.1l14 10.1-5.4 16.2 13.9-10z"></path></g></svg></span></td>
+<td headers="Sub-Saharan Africa  Name" class="gt_row gt_left">Halcyonair</td>
+<td headers="Sub-Saharan Africa  Country" class="gt_row gt_left">Cape Verde</td>
+<td headers="Sub-Saharan Africa  passenger_count" class="gt_row gt_right">4,023,143</td></tr>
+    <tr><td headers="Sub-Saharan Africa  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Sierra Leone</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="m0 167 253.8-19.3L512 167v178l-254.9 32.3L0 345z"></path><path fill="#6da544" d="M0 0h512v167H0z"></path><path fill="#338af3" d="M0 345h512v167H0z"></path></g></svg></span></td>
+<td headers="Sub-Saharan Africa  Name" class="gt_row gt_left">Sierra National Airlines</td>
+<td headers="Sub-Saharan Africa  Country" class="gt_row gt_left">Sierra Leone</td>
+<td headers="Sub-Saharan Africa  passenger_count" class="gt_row gt_right">2,336,823</td></tr>
+    <tr><td headers="Sub-Saharan Africa  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Mozambique</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="m99 136.8 413 20v31.5l-35.9 66.1 36.2 68.4-.3 32.4-413 22z"></path><path fill="#496e2d" d="M512 156.8V0H0l122 156.8z"></path><path fill="#333" d="M167 188.3v134.5h345.3l-.3-134.5z"></path><path fill="#ffda44" d="M512 355.2V512H0l122-156.8z"></path><path fill="#a2001d" d="M0 0v512l256-256z"></path><path fill="#ffda44" d="m103.6 189.2 16.6 51h53.6l-43.4 31.6 16.6 51-43.4-31.5-43.4 31.5 16.6-51-43.4-31.6H87z"></path><path fill="#eee" d="M55.1 256h97v44.5h-97z"></path><path fill="#333" d="m170.5 205-15.7-15.8-51.2 51.2-51.1-51.2L36.7 205 88 256l-51.2 51.3 15.8 15.5 51.1-51 51.2 51 15.7-15.5-51.2-51.2z"></path></g></svg></span></td>
+<td headers="Sub-Saharan Africa  Name" class="gt_row gt_left">Linhas A</td>
+<td headers="Sub-Saharan Africa  Country" class="gt_row gt_left">Mozambique</td>
+<td headers="Sub-Saharan Africa  passenger_count" class="gt_row gt_right">1,674,885</td></tr>
+    <tr><td headers="Sub-Saharan Africa  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Congo</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#ffda44" d="M384 0h128v128L352 352 128 512H0V384l160-224Z"></path><path fill="#6da544" d="M0 384 384 0H0Z"></path><path fill="#d80027" d="M512 128 128 512h384z"></path></g></svg></span></td>
+<td headers="Sub-Saharan Africa  Name" class="gt_row gt_left">Aero-Service</td>
+<td headers="Sub-Saharan Africa  Country" class="gt_row gt_left">Republic of the Congo</td>
+<td headers="Sub-Saharan Africa  passenger_count" class="gt_row gt_right">1,333,257</td></tr>
+    <tr><td headers="Sub-Saharan Africa  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Burundi</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M0 0h47.2l207.5 30L464.8 0H512v47.2L477.4 256 512 464.8V512h-47.2l-209.1-35.8L47.2 512H0v-47.2l32.8-202.7L0 47.2z"></path><path fill="#d80027" d="M47.2 0 256 208.8 464.8 0H47.2zM256 303.2 47.2 512h417.6L256 303.2z"></path><path fill="#6da544" d="M0 47.2v417.6L208.8 256 0 47.2zm512 0L303.2 256 512 464.8V47.2z"></path><circle cx="256" cy="256" r="111.3" fill="#eee"></circle><path fill="#d80027" d="m256 178 9.6 16.8H285l-9.6 16.7 9.6 16.7h-19.3l-9.6 16.7-9.6-16.7H227l9.6-16.7-9.6-16.7h19.3zm-49 78 9.6 16.7H236l-9.6 16.7 9.6 16.7h-19.3l-9.6 16.7-9.6-16.7H178l9.6-16.7-9.6-16.7h19.3zm98 0 9.6 16.7H334l-9.6 16.7 9.6 16.7h-19.3l-9.6 16.7-9.6-16.7H276l9.6-16.7-9.6-16.7h19.3z"></path></g></svg></span></td>
+<td headers="Sub-Saharan Africa  Name" class="gt_row gt_left">City Connexion Airlines</td>
+<td headers="Sub-Saharan Africa  Country" class="gt_row gt_left">Burundi</td>
+<td headers="Sub-Saharan Africa  passenger_count" class="gt_row gt_right">1,138,809</td></tr>
+    <tr><td headers="Sub-Saharan Africa  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Zambia</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#496e2d" d="M0 0h512v256L256 512H0z"></path><path fill="#ff9811" d="M473 167h-66.7a22.3 22.3 0 0 0-44.6 0H295a23 23 0 0 0 23 22.2h-.8c0 12.3 10 22.3 22.3 22.3 0 12.3 10 22.2 22.2 22.2h44.6c12.3 0 22.2-10 22.2-22.2 12.3 0 22.3-10 22.3-22.3h-.8a23 23 0 0 0 23-22.2z"></path><path fill="#333" d="M341.3 256h85.4l21.1 126.3L426.7 512h-85.4l-23.5-128z"></path><path fill="#d80027" d="M256 256h85.3v256H256z"></path><path fill="#ff9811" d="M426.7 256H512v256h-85.3z"></path></g></svg></span></td>
+<td headers="Sub-Saharan Africa  Name" class="gt_row gt_left">Airlink Zambia</td>
+<td headers="Sub-Saharan Africa  Country" class="gt_row gt_left">Zambia</td>
+<td headers="Sub-Saharan Africa  passenger_count" class="gt_row gt_right">819,140</td></tr>
+    <tr><td headers="Sub-Saharan Africa  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Zambia</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#496e2d" d="M0 0h512v256L256 512H0z"></path><path fill="#ff9811" d="M473 167h-66.7a22.3 22.3 0 0 0-44.6 0H295a23 23 0 0 0 23 22.2h-.8c0 12.3 10 22.3 22.3 22.3 0 12.3 10 22.2 22.2 22.2h44.6c12.3 0 22.2-10 22.2-22.2 12.3 0 22.3-10 22.3-22.3h-.8a23 23 0 0 0 23-22.2z"></path><path fill="#333" d="M341.3 256h85.4l21.1 126.3L426.7 512h-85.4l-23.5-128z"></path><path fill="#d80027" d="M256 256h85.3v256H256z"></path><path fill="#ff9811" d="M426.7 256H512v256h-85.3z"></path></g></svg></span></td>
+<td headers="Sub-Saharan Africa  Name" class="gt_row gt_left">Zambia Skyways</td>
+<td headers="Sub-Saharan Africa  Country" class="gt_row gt_left">Zambia</td>
+<td headers="Sub-Saharan Africa  passenger_count" class="gt_row gt_right">819,140</td></tr>
+    <tr><td headers="Sub-Saharan Africa  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Gabon</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#ffda44" d="m0 167 253.8-19.3L512 167v178l-254.9 32.3L0 345z"></path><path fill="#6da544" d="M0 0h512v167H0z"></path><path fill="#0052b4" d="M0 345h512v167H0z"></path></g></svg></span></td>
+<td headers="Sub-Saharan Africa  Name" class="gt_row gt_left">Gabon Airlines</td>
+<td headers="Sub-Saharan Africa  Country" class="gt_row gt_left">Gabon</td>
+<td headers="Sub-Saharan Africa  passenger_count" class="gt_row gt_right">624,928</td></tr>
+    <tr><td headers="Sub-Saharan Africa  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Sudan</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M43.6 109.4 512 144.7v222.6L43.8 397.2z"></path><path fill="#d80027" d="M0 0h512v144.7H111z"></path><path fill="#333" d="M111 367.3h401V512H0z"></path><path fill="#496e2d" d="M0 0v512l256-256z"></path></g></svg></span></td>
+<td headers="Sub-Saharan Africa  Name" class="gt_row gt_left">African Transport Trading and Investment Company</td>
+<td headers="Sub-Saharan Africa  Country" class="gt_row gt_left">Sudan</td>
+<td headers="Sub-Saharan Africa  passenger_count" class="gt_row gt_right">605,247</td></tr>
+    <tr><td headers="Sub-Saharan Africa  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Cote d'Ivoire</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="M167 0h178l31 253.2L345 512H167l-33.4-257.4z"></path><path fill="#ff9811" d="M0 0h167v512H0z"></path><path fill="#6da544" d="M345 0h167v512H345z"></path></g></svg></span></td>
+<td headers="Sub-Saharan Africa  Name" class="gt_row gt_left">Air Afrique</td>
+<td headers="Sub-Saharan Africa  Country" class="gt_row gt_left">Ivory Coast</td>
+<td headers="Sub-Saharan Africa  passenger_count" class="gt_row gt_right">513,189</td></tr>
+    <tr><td headers="Sub-Saharan Africa  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Nigeria</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#6da544" d="M0 0v512h160l96-64 96 64h160V0H352l-96 64-96-64Z"></path><path fill="#eee" d="M160 0h192v512H160Z"></path></g></svg></span></td>
+<td headers="Sub-Saharan Africa  Name" class="gt_row gt_left">Overland Airways</td>
+<td headers="Sub-Saharan Africa  Country" class="gt_row gt_left">Nigeria</td>
+<td headers="Sub-Saharan Africa  passenger_count" class="gt_row gt_right">371,906</td></tr>
+    <tr><td headers="Sub-Saharan Africa  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Kenya</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#eee" d="m0 144.7 253.4-28.2L512 144.7V178l-36 76.4 36 79.6v33.3L254.7 400 0 367.3V334l39-78-39-78z"></path><path fill="#333" d="M0 0h512v144.7H0z"></path><path fill="#a2001d" d="M0 178h512v156H0z"></path><path fill="#496e2d" d="M0 367.3h512V512H0z"></path><path fill="#eee" d="m335.9 118.3-30.3-14-49.4 111.9-49.4-111.9-30.3 14L237.8 256l-61.3 137.7 30.3 14 49.4-111.9 49.4 111.9 30.3-14L274.6 256z"></path><path fill="#eee" d="M256.2 111.3s-7 5.8-16.7 16l-16 127.6 16 129.8c9.7 10.2 16.7 16 16.7 16s7-5.8 16.7-16l15-130.7-15-126.7c-9.7-10.2-16.7-16-16.7-16z"></path><path fill="#333" d="m311.9 179.2-10 75.5 10 78.1A158.6 158.6 0 0 0 334 256c0-28.2-9.7-54.5-22.2-76.8zm-111.4 0 8.9 74.3-9 79.3a158.6 158.6 0 0 1-22.1-76.8c0-28.2 9.7-54.5 22.2-76.8z"></path><path fill="#a2001d" d="M200.5 179.2v153.6a269 269 0 0 0 39 51.9V127.3c-11.4 12-26.6 30-39 52zm111.4 0a269 269 0 0 0-39-51.9v257.4c11.4-12 26.5-30 39-52V179.3z"></path></g></svg></span></td>
+<td headers="Sub-Saharan Africa  Name" class="gt_row gt_left">Kenya Airways</td>
+<td headers="Sub-Saharan Africa  Country" class="gt_row gt_left">Kenya</td>
+<td headers="Sub-Saharan Africa  passenger_count" class="gt_row gt_right">330,701</td></tr>
+    <tr><td headers="Sub-Saharan Africa  code2" class="gt_row gt_left"><span style="white-space:nowrap;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="512" height="512" viewbox="0 0 512 512" style="vertical-align:-0.125em;image-rendering:optimizeQuality;height:1em;width:1em;"><title>Nigeria</title><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"></circle></mask><g mask="url(#a)"><path fill="#6da544" d="M0 0v512h160l96-64 96 64h160V0H352l-96 64-96-64Z"></path><path fill="#eee" d="M160 0h192v512H160Z"></path></g></svg></span></td>
+<td headers="Sub-Saharan Africa  Name" class="gt_row gt_left">Arik Air</td>
+<td headers="Sub-Saharan Africa  Country" class="gt_row gt_left">Nigeria</td>
+<td headers="Sub-Saharan Africa  passenger_count" class="gt_row gt_right">249,804</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

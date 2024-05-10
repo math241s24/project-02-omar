@@ -16,6 +16,8 @@ Under a folder named ***data*** is where all of the data (sourced from the U.S. 
 
 Under the folder ***code***, there will be all the R code files for this project.
 
+Under the folder ***images***, there are pre-rendered images for graphs that take extremely long to render due to needing a lot of computational power. Render pictures as SVG for full quality and all data to be graphed, but take caution regarding file size as it is larger than the GitHub limit.
+
 ------------------------------------------------------------------------
 
 Credits: **Omar Youssif (\@omaryoussif)**
