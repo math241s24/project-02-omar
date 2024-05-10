@@ -2,7 +2,7 @@
 
 ### Reed College: Math 241 with Adrien Allorant - Data Science
 
-In this ***data*** folder, there is a csv file named "us-dot-air-intl-2023.csv" that contains all of the data for this project. It has 766,693 rows and 16 columns.
+In this ***data*** folder, there is a csv file named "us-dot-air-intl-2023.csv" that contains all of the data for this project. It has 766,693 rows and 16 columns. There are also dat files from OpenFlights that talk about airports, airlines, and countries.
 
 ### Codebook for **airports.dat** (sourced from [OpenFlights.org](https://openflights.org/data.php))
 
