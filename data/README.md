@@ -7,7 +7,7 @@ In this ***data*** folder, there is a csv file named "us-dot-air-intl-2023.csv" 
 ### Codebook for **airports.dat** (sourced from [OpenFlights.org](https://openflights.org/data.php))
 
 | Variable Name            | Definition                                                                                                                                                                                                                                                              |
-|-----------------|-------------------------------------------------------|
+|--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Airport ID**           | Unique OpenFlights identifier for this airport.                                                                                                                                                                                                                         |
 | **Name**                 | Name of airport. May or may not contain the **City** name.                                                                                                                                                                                                              |
 | **City**                 | Main city served by airport. May be spelled differently from **Name**.                                                                                                                                                                                                  |
@@ -26,7 +26,7 @@ In this ***data*** folder, there is a csv file named "us-dot-air-intl-2023.csv" 
 ### Codebook for **countries.dat** (sourced from [OpenFlights.org](https://openflights.org/data.php))
 
 | Variable Name  | Definition                                                                            |
-|-----------------|-------------------------------------------------------|
+|----------------|---------------------------------------------------------------------------------------|
 | **name**       | Full name of the country or territory.                                                |
 | **iso_code**   | Unique two-letter ISO 3166-1 code for the country or territory.                       |
 | **dafif_code** | FIPS country codes as used in DAFIF. Obsolete and primarily of historical interested. |
@@ -34,7 +34,7 @@ In this ***data*** folder, there is a csv file named "us-dot-air-intl-2023.csv" 
 ### Codebook for **airlines.dat** (sourced from [OpenFlights.org](https://openflights.org/data.php))
 
 | Variable Name  | Definition                                                                          |
-|-----------------|-------------------------------------------------------|
+|----------------|-------------------------------------------------------------------------------------|
 | **Airline ID** | Unique OpenFlights identifier for this airline.                                     |
 | **Name**       | Name of the airline.                                                                |
 | **Alias**      | Alias of the airline. For example, All Nippon Airways is commonly known as "ANA".   |
@@ -47,7 +47,7 @@ In this ***data*** folder, there is a csv file named "us-dot-air-intl-2023.csv" 
 ### Codebook for **us-dot-air-intl-2023.csv** (sourced from U.S. Department of Transportation)
 
 | Variable Name    | Definition                                                                                          |
-|-----------------|-------------------------------------------------------|
+|------------------|-----------------------------------------------------------------------------------------------------|
 | **Year**         | Data Year                                                                                           |
 | **Month**        | Data Month                                                                                          |
 | **usg_apt_id**   | US Gateway Airport ID - assigned by US DOT to identify an airport                                   |
