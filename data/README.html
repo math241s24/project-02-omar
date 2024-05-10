@@ -50,6 +50,207 @@ ul.task-list li input[type="checkbox"] {
 <section id="reed-college-math-241-with-adrien-allorant---data-science" class="level3">
 <h3 class="anchored" data-anchor-id="reed-college-math-241-with-adrien-allorant---data-science">Reed College: Math 241 with Adrien Allorant - Data Science</h3>
 <p>In this <strong><em>data</em></strong> folder, there is a csv file named “us-dot-air-intl-2023.csv” that contains all of the data for this project. It has 766,693 rows and 16 columns.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Variable Name</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Airport ID</strong></td>
+<td>Unique OpenFlights identifier for this airport.</td>
+</tr>
+<tr class="even">
+<td><strong>Name</strong></td>
+<td>Name of airport. May or may not contain the&nbsp;<strong>City</strong>&nbsp;name.</td>
+</tr>
+<tr class="odd">
+<td><strong>City</strong></td>
+<td>Main city served by airport. May be spelled differently from&nbsp;<strong>Name</strong>.</td>
+</tr>
+<tr class="even">
+<td><strong>Country</strong></td>
+<td>Country or territory where airport is located.</td>
+</tr>
+<tr class="odd">
+<td><strong>IATA</strong></td>
+<td>3-letter IATA code. Null if not assigned/unknown.</td>
+</tr>
+<tr class="even">
+<td><strong>ICAO</strong></td>
+<td>4-letter ICAO code.<br>
+Null if not assigned.</td>
+</tr>
+<tr class="odd">
+<td><strong>Latitude</strong></td>
+<td>Decimal degrees, usually to six significant digits. Negative is South, positive is North.</td>
+</tr>
+<tr class="even">
+<td><strong>Longitude</strong></td>
+<td>Decimal degrees, usually to six significant digits. Negative is West, positive is East.</td>
+</tr>
+<tr class="odd">
+<td><strong>Altitude</strong></td>
+<td>In feet.</td>
+</tr>
+<tr class="even">
+<td><strong>Timezone</strong></td>
+<td>Hours offset from UTC. Fractional hours are expressed as decimals, eg. India is 5.5.</td>
+</tr>
+<tr class="odd">
+<td><strong>DST</strong></td>
+<td>Daylight savings time. One of E (Europe), A (US/Canada), S (South America), O (Australia), Z (New Zealand), N (None) or U (Unknown).</td>
+</tr>
+<tr class="even">
+<td><strong>Tz database timezone</strong></td>
+<td>Timezone in&nbsp;<a href="https://en.wikipedia.org/wiki/Tz_database">“tz” (Olson) format</a>, eg. “America/Los_Angeles”.</td>
+</tr>
+<tr class="odd">
+<td><strong>Type</strong></td>
+<td>Type of the airport. Value “airport” for air terminals, “station” for train stations, “port” for ferry terminals and “unknown” if not known.&nbsp;<em>In airports.csv, only type=airport is included.</em></td>
+</tr>
+<tr class="even">
+<td><strong>Source</strong></td>
+<td>Source of this data. “OurAirports” for data sourced from&nbsp;<a href="https://ourairports.com/data/">OurAirports</a>, “Legacy” for old data not matched to OurAirports (mostly DAFIF), “User” for unverified user contributions.&nbsp;<em>In airports.csv, only source=OurAirports is included.</em></td>
+</tr>
+</tbody>
+</table>
+<p>Codebook for <strong>airports.dat</strong> (sourced from <a href="https://openflights.org/data.php">OpenFlights.org</a>)</p>
+<table class="table">
+<caption>Codebook for <strong>countries.dat</strong> (sourced from <a href="https://openflights.org/data.php">OpenFlights.org</a>)</caption>
+<thead>
+<tr class="header">
+<th>Variable Name</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>name</strong></td>
+<td>Full name of the country or territory.</td>
+</tr>
+<tr class="even">
+<td><strong>iso_code</strong></td>
+<td>Unique two-letter ISO 3166-1 code for the country or territory.</td>
+</tr>
+<tr class="odd">
+<td><strong>dafif_code</strong></td>
+<td>FIPS country codes as used in DAFIF. Obsolete and primarily of historical interested.</td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<caption>Codebook for <strong>airlines.dat</strong> (sourced from <a href="https://openflights.org/data.php">OpenFlights.org</a>)</caption>
+<thead>
+<tr class="header">
+<th>Variable Name</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Airline ID</strong></td>
+<td>Unique OpenFlights identifier for this airline.</td>
+</tr>
+<tr class="even">
+<td><strong>Name</strong></td>
+<td>Name of the airline.</td>
+</tr>
+<tr class="odd">
+<td><strong>Alias</strong></td>
+<td>Alias of the airline. For example, All Nippon Airways is commonly known as “ANA”.</td>
+</tr>
+<tr class="even">
+<td><strong>IATA</strong></td>
+<td>2-letter IATA code, if available.</td>
+</tr>
+<tr class="odd">
+<td><strong>ICAO</strong></td>
+<td>3-letter ICAO code, if available.</td>
+</tr>
+<tr class="even">
+<td><strong>Callsign</strong></td>
+<td>Airline callsign.</td>
+</tr>
+<tr class="odd">
+<td><strong>Country</strong></td>
+<td>Country or territory where airport is located.</td>
+</tr>
+<tr class="even">
+<td><strong>Active</strong></td>
+<td>“Y” if the airline is or has until recently been operational, “N” if it is defunct. This field is&nbsp;<em>not</em>&nbsp;reliable: in particular, major airlines that stopped flying long ago, but have not had their IATA code reassigned (eg. Ansett/AN), will incorrectly show as “Y”.</td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<caption>Codebook for <strong>us-dot-air-intl-2023.csv</strong> (sourced from U.S. Department of Transportation). Data tables relating to Airline ID, Carrier, World Area Code may be found at <a href="http://www.transtats.bts.gov/TableInfo.asp?Table_ID=304&amp;DB_Short_Name=Aviation%20Support%20Tables&amp;Info_Only=1">this link</a>.</caption>
+<thead>
+<tr class="header">
+<th>Variable Name</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Year</strong></td>
+<td>Data Year</td>
+</tr>
+<tr class="even">
+<td><strong>Month</strong></td>
+<td>Data Month</td>
+</tr>
+<tr class="odd">
+<td><strong>usg_apt_id</strong></td>
+<td>US Gateway Airport ID - assigned by US DOT to identify an airport</td>
+</tr>
+<tr class="even">
+<td><strong>usg_apt</strong></td>
+<td>US Gateway Airport Code - usually assigned by IATA, but in absense of IATA designation, may show FAA-assigned code</td>
+</tr>
+<tr class="odd">
+<td><strong>usg_wac</strong></td>
+<td>US Gateway World Area Code - assigned by US DOT to represent a geographic territory</td>
+</tr>
+<tr class="even">
+<td><strong>fg_apt_id</strong></td>
+<td>Foreign Gateway Airport ID - assigned by US DOT to identify an airport</td>
+</tr>
+<tr class="odd">
+<td><strong>fg_apt</strong></td>
+<td>Foreign Gateway Airport Code - usually assigned by IATA, but in absense of IATA designation, may show FAA-assigned code</td>
+</tr>
+<tr class="even">
+<td><strong>airlineid</strong></td>
+<td>Airline ID - assigned by US DOT to identify an air carrier</td>
+</tr>
+<tr class="odd">
+<td><strong>carrier</strong></td>
+<td>IATA-assigned air carrier code. If carrier has no IATA code, ICAO- or FAA-assigned code may be used</td>
+</tr>
+<tr class="even">
+<td><strong>carriergroup</strong></td>
+<td>Carrier Group Code - 1 denotes US domestic air carriers, 0 denotes foreign air carriers</td>
+</tr>
+<tr class="odd">
+<td><strong>type</strong></td>
+<td>Defines the type of flight operated</td>
+</tr>
+<tr class="even">
+<td><strong>Scheduled</strong></td>
+<td>Number of passengers carried by scheduled service operations</td>
+</tr>
+<tr class="odd">
+<td><strong>Charter</strong></td>
+<td>Number of passengers carried by charter operations</td>
+</tr>
+<tr class="even">
+<td><strong>Total</strong></td>
+<td>Total passengers carried by scheduled service and charter operations</td>
+</tr>
+</tbody>
+</table>
 <hr>
 <p>Credits: <strong>Omar Youssif (@omaryoussif)</strong></p>
 <p>Data Source: U.S. Department of Transportation (<strong>data</strong> <strong>owner: Randall Keizer at randall.keizer@dot.gov</strong>) and is accessible through <a href="https://data.transportation.gov/Aviation/International_Report_Passengers/xgub-n9bw/about_data">this link</a>.</p>
